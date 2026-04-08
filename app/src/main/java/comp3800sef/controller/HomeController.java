@@ -9,7 +9,16 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model) {
-        model.addAttribute("message", "Hello World!");
-        return "home";
+        return "index";
+    }
+
+    @GetMapping("/lecture")
+    public String lecture(Model model) {
+        return "lecture";
+    }
+
+    @GetMapping("/poll")
+    public String poll(Model model) {
+        return "poll";
     }
 }

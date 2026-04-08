@@ -1,10 +1,12 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course - Learning Management System</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <style>
         body {
             background-color: #f8f9fa;
@@ -187,7 +189,7 @@
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-lg">
-        <a class="navbar-brand" href="index.html">Online Learning Platform</a>
+        <a class="navbar-brand" href="/">Online Learning Platform</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -200,7 +202,7 @@
                     <button class="btn btn-auth" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showRegisterTab()">Register</button>
                 </li>
                 <li class="nav-item" id="profileButton" style="display: none;">
-                    <a class="nav-link" href="profile.html">Profile</a>
+                    <a class="nav-link" href="/profile">Profile</a>
                 </li>
                 <li class="nav-item" id="logoutButton" style="display: none;">
                     <form method="POST" action="/logout" style="display: inline;">
@@ -228,46 +230,46 @@
 
 <div class="container-lg">
     <!-- Lectures Section -->
-    <div class="section-title">📚 Course Materials</div>
+    <div class="section-title">&#128218; Course Materials</div>
     <div class="row">
         <div class="col-md-8">
-            <a href="lecture.html" class="text-decoration-none">
+            <a href="/lecture?id=1" class="text-decoration-none">
                 <div class="lecture-card">
                     <div class="lecture-title">Lecture 1: Introduction to Web Development</div>
                     <div class="lecture-preview">
                         Overview of web technologies, client-server architecture, and the evolution of web frameworks.
                     </div>
-                    <a href="lecture.html?id=1" class="btn-view">View Materials</a>
+                    <span class="btn-view">View Materials</span>
                 </div>
             </a>
 
-            <a href="lecture.html" class="text-decoration-none">
+            <a href="/lecture?id=2" class="text-decoration-none">
                 <div class="lecture-card">
                     <div class="lecture-title">Lecture 2: Jakarta EE Fundamentals</div>
                     <div class="lecture-preview">
                         Understanding Jakarta EE components, servlet technology, JSP pages, and enterprise applications.
                     </div>
-                    <a href="lecture.html?id=2" class="btn-view">View Materials</a>
+                    <span class="btn-view">View Materials</span>
                 </div>
             </a>
 
-            <a href="lecture.html" class="text-decoration-none">
+            <a href="/lecture?id=3" class="text-decoration-none">
                 <div class="lecture-card">
                     <div class="lecture-title">Lecture 3: Spring Framework Basics</div>
                     <div class="lecture-preview">
                         Introduction to Spring Framework, dependency injection, and the Spring MVC architecture.
                     </div>
-                    <a href="lecture.html?id=3" class="btn-view">View Materials</a>
+                    <span class="btn-view">View Materials</span>
                 </div>
             </a>
 
-            <a href="lecture.html" class="text-decoration-none">
+            <a href="/lecture?id=4" class="text-decoration-none">
                 <div class="lecture-card">
                     <div class="lecture-title">Lecture 4: Spring Boot Development</div>
                     <div class="lecture-preview">
                         Building applications with Spring Boot, auto-configuration, and embedded servers.
                     </div>
-                    <a href="lecture.html?id=4" class="btn-view">View Materials</a>
+                    <span class="btn-view">View Materials</span>
                 </div>
             </a>
         </div>
@@ -287,41 +289,41 @@
     </div>
 
     <!-- poll -->
-    <div class="section-title">🗳️ Community Polls</div>
+    <div class="section-title">&#128499;&#65039; Community Polls</div>
     <div class="row">
         <div class="col-md-8">
-            <a href="poll.html?id=1" class="text-decoration-none">
+            <a href="/poll?id=1" class="text-decoration-none">
                 <div class="poll-card">
                     <div class="poll-question">Which topic should be introduced in the next class?</div>
-                    <div class="poll-info">Total votes: 145 • Active until Dec 15</div>
+                    <div class="poll-info">Total votes: 145 &bull; Active until Dec 15</div>
                 </div>
             </a>
 
-            <a href="poll.html?id=2" class="text-decoration-none">
+            <a href="/poll?id=2" class="text-decoration-none">
                 <div class="poll-card">
                     <div class="poll-question">Preferred pace of the course?</div>
-                    <div class="poll-info">Total votes: 98 • Active until Dec 20</div>
+                    <div class="poll-info">Total votes: 98 &bull; Active until Dec 20</div>
                 </div>
             </a>
 
-            <a href="poll.html?id=3" class="text-decoration-none">
+            <a href="/poll?id=3" class="text-decoration-none">
                 <div class="poll-card">
                     <div class="poll-question">Best time for optional review sessions?</div>
-                    <div class="poll-info">Total votes: 67 • Active until Dec 22</div>
+                    <div class="poll-info">Total votes: 67 &bull; Active until Dec 22</div>
                 </div>
             </a>
 
-            <a href="poll.html?id=4" class="text-decoration-none">
+            <a href="/poll?id=4" class="text-decoration-none">
                 <div class="poll-card">
                     <div class="poll-question">Preferred assignment format?</div>
-                    <div class="poll-info">Total votes: 112 • Active until Dec 25</div>
+                    <div class="poll-info">Total votes: 112 &bull; Active until Dec 25</div>
                 </div>
             </a>
 
-            <a href="poll.html?id=5" class="text-decoration-none">
+            <a href="/poll?id=5" class="text-decoration-none">
                 <div class="poll-card">
                     <div class="poll-question">Would you like more practical projects?</div>
-                    <div class="poll-info">Total votes: 156 • Active until Dec 28</div>
+                    <div class="poll-info">Total votes: 156 &bull; Active until Dec 28</div>
                 </div>
             </a>
         </div>
@@ -332,10 +334,10 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled">
-                        <li><button class="btn btn-link text-decoration-none p-0" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showLoginTab()">📝 Login</button></li>
-                        <li><button class="btn btn-link text-decoration-none p-0" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showRegisterTab()">📋 Register</button></li>
-                        <li><a href="#" class="text-decoration-none">📧 Contact Instructor</a></li>
-                        <li><a href="#" class="text-decoration-none">❓ FAQ</a></li>
+                        <li><button class="btn btn-link text-decoration-none p-0" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showLoginTab()">&#128221; Login</button></li>
+                        <li><button class="btn btn-link text-decoration-none p-0" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showRegisterTab()">&#128203; Register</button></li>
+                        <li><a href="#" class="text-decoration-none">&#128231; Contact Instructor</a></li>
+                        <li><a href="#" class="text-decoration-none">&#10067; FAQ</a></li>
                     </ul>
                 </div>
             </div>
@@ -344,7 +346,7 @@
 
 
     <footer class="text-center py-4 mt-5 border-top">
-        <p class="text-muted">© 2024 Learning Management System. All rights reserved.</p>
+        <p class="text-muted">&copy; 2024 Learning Management System. All rights reserved.</p>
     </footer>
 </div>
 
@@ -380,7 +382,7 @@
                                 <label for="loginPassword" class="form-label">Password</label>
                                 <div class="password-input-group">
                                     <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
-                                    <span class="toggle-password" onclick="togglePassword('loginPassword')">👁️</span>
+                                    <span class="toggle-password" onclick="togglePassword('loginPassword')">&#128065;&#65039;</span>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary-modal btn-primary w-100">Login</button>
@@ -406,7 +408,7 @@
                                 <label for="registerPassword" class="form-label">Password</label>
                                 <div class="password-input-group">
                                     <input type="password" class="form-control" id="registerPassword" placeholder="Create a password" required>
-                                    <span class="toggle-password" onclick="togglePassword('registerPassword')">👁️</span>
+                                    <span class="toggle-password" onclick="togglePassword('registerPassword')">&#128065;&#65039;</span>
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -430,7 +432,7 @@
     </div>
 </div>
 
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
 <script>
 
     function showLoginTab() {

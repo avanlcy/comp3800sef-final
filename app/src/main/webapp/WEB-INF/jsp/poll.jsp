@@ -1,10 +1,12 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Poll - LMS</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <style>
         body {
             background-color: #f8f9fa;
@@ -212,14 +214,14 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-lg">
-        <a class="navbar-brand" href="index.html">LMS</a>
+        <a class="navbar-brand" href="/">LMS</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
             </ul>
         </div>
@@ -231,7 +233,7 @@
     <div class="container-lg">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item active">Community Poll</li>
             </ol>
         </nav>
@@ -241,7 +243,7 @@
 
 <div class="poll-header">
     <div class="container-lg">
-        <div class="poll-title" id="pollTitle">🗳️ Community Poll</div>
+        <div class="poll-title" id="pollTitle">&#128499;&#65039; Community Poll</div>
         <div class="poll-meta" id="pollMeta">
             Active until Dec 15, 2024 | 145 Total Votes | 87 Participants
         </div>
@@ -259,7 +261,7 @@
 
             <!-- Authentication Alert (for unregistered users) -->
             <div class="auth-alert" id="authAlert" style="display: none;">
-                <strong>⚠️ Please Log In</strong><br>
+                <strong>&#9888;&#65039; Please Log In</strong><br>
                 You need to be logged in to vote on polls. <a href="javascript:void(0);" onclick="alert('Please login from the home page')">Click here to login</a> or <a href="javascript:void(0);" onclick="alert('Please register from the home page')">register</a> if you don't have an account.
             </div>
 
@@ -275,7 +277,7 @@
             </form>
 
             <div>
-                <div class="section-title">💬 Discussion</div>
+                <div class="section-title">&#128172; Discussion</div>
 
                 <!-- Comment Form (visible only to registered users) -->
                 <div class="comment-form" id="commentForm">
@@ -320,11 +322,11 @@
     </div>
 
     <footer class="text-center py-4 mt-5 border-top">
-        <p class="text-muted">© 2024 Learning Management System. All rights reserved.</p>
+        <p class="text-muted">&copy; 2024 Learning Management System. All rights reserved.</p>
     </footer>
 </div>
 
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
 <script>
     const pollData = {
         1: {
@@ -342,17 +344,17 @@
             ],
             comments: [
                 {
-                    author: "👤 Alex Thompson (Student)",
+                    author: "\u{1F464} Alex Thompson (Student)",
                     date: "Nov 20, 2024 at 1:15 PM",
                     text: "I think microservices is the way to go in modern web development. Looking forward to this topic!"
                 },
                 {
-                    author: "👤 Emma Wilson (Student)",
+                    author: "\u{1F464} Emma Wilson (Student)",
                     date: "Nov 20, 2024 at 3:30 PM",
                     text: "Database optimization is crucial for our project. Hope we can dive deep into indexing and query performance."
                 },
                 {
-                    author: "👨‍🏫 Dr. John Smith (Instructor)",
+                    author: "\u{1F468}\u200D\u{1F3EB} Dr. John Smith (Instructor)",
                     date: "Nov 21, 2024 at 9:00 AM",
                     text: "Great discussion everyone! Based on the poll results, it looks like microservices will be the next topic. Make sure to review the prerequisite materials before the next class."
                 }
@@ -373,17 +375,17 @@
             ],
             comments: [
                 {
-                    author: "👤 Sarah Johnson (Student)",
+                    author: "\u{1F464} Sarah Johnson (Student)",
                     date: "Nov 22, 2024 at 2:00 PM",
                     text: "The current pace works well for me. I can keep up and have time to practice."
                 },
                 {
-                    author: "👤 Mike Chen (Student)",
+                    author: "\u{1F464} Mike Chen (Student)",
                     date: "Nov 22, 2024 at 4:30 PM",
                     text: "I'd prefer a slightly faster pace. I feel like I'm getting bored with the depth of coverage."
                 },
                 {
-                    author: "👨‍🏫 Dr. Jane Smith (Instructor)",
+                    author: "\u{1F468}\u200D\u{1F3EB} Dr. Jane Smith (Instructor)",
                     date: "Nov 23, 2024 at 10:00 AM",
                     text: "Thank you for your feedback! We'll try to balance depth and pace moving forward."
                 }
@@ -404,22 +406,22 @@
             ],
             comments: [
                 {
-                    author: "👤 Lisa Park (Student)",
+                    author: "\u{1F464} Lisa Park (Student)",
                     date: "Nov 23, 2024 at 1:45 PM",
                     text: "Wednesday afternoon works best for my schedule. Thank you for offering review sessions!"
                 },
                 {
-                    author: "👤 David Lee (Student)",
+                    author: "\u{1F464} David Lee (Student)",
                     date: "Nov 23, 2024 at 5:15 PM",
                     text: "I prefer Friday mornings. It helps me prepare for the upcoming week."
                 },
                 {
-                    author: "👨‍🏫 Dr. John Smith (Instructor)",
+                    author: "\u{1F468}\u200D\u{1F3EB} Dr. John Smith (Instructor)",
                     date: "Nov 24, 2024 at 11:30 AM",
                     text: "Wednesday 2:00 PM seems to be the winner! We'll schedule the review sessions then."
                 },
                 {
-                    author: "👤 Rachel Adams (Student)",
+                    author: "\u{1F464} Rachel Adams (Student)",
                     date: "Nov 24, 2024 at 2:20 PM",
                     text: "Great! Will these sessions be recorded for those who can't attend?"
                 }
@@ -440,17 +442,17 @@
             ],
             comments: [
                 {
-                    author: "👤 James Wilson (Student)",
+                    author: "\u{1F464} James Wilson (Student)",
                     date: "Nov 24, 2024 at 3:00 PM",
                     text: "Code projects are the best way to learn. I feel more confident when I can apply concepts directly."
                 },
                 {
-                    author: "👤 Nina Patel (Student)",
+                    author: "\u{1F464} Nina Patel (Student)",
                     date: "Nov 24, 2024 at 6:30 PM",
                     text: "I'd love to do more group projects to improve collaboration skills."
                 },
                 {
-                    author: "👨‍🏫 Dr. Jane Smith (Instructor)",
+                    author: "\u{1F468}\u200D\u{1F3EB} Dr. Jane Smith (Instructor)",
                     date: "Nov 25, 2024 at 9:00 AM",
                     text: "Code projects are indeed effective! We'll continue with hands-on assignments."
                 }
@@ -471,27 +473,27 @@
             ],
             comments: [
                 {
-                    author: "👤 Christopher Lee (Student)",
+                    author: "\u{1F464} Christopher Lee (Student)",
                     date: "Nov 25, 2024 at 1:30 PM",
                     text: "Yes! More projects would really help solidify the concepts. Theory is good, but practice is essential."
                 },
                 {
-                    author: "👤 Victoria Brown (Student)",
+                    author: "\u{1F464} Victoria Brown (Student)",
                     date: "Nov 25, 2024 at 4:00 PM",
                     text: "Practical projects make learning much more engaging and enjoyable."
                 },
                 {
-                    author: "👨‍🏫 Dr. John Smith (Instructor)",
+                    author: "\u{1F468}\u200D\u{1F3EB} Dr. John Smith (Instructor)",
                     date: "Nov 26, 2024 at 10:00 AM",
                     text: "Excellent feedback! We're planning to introduce more capstone projects starting next semester. Stay tuned!"
                 },
                 {
-                    author: "👤 Marcus Johnson (Student)",
+                    author: "\u{1F464} Marcus Johnson (Student)",
                     date: "Nov 26, 2024 at 2:45 PM",
                     text: "Great! Can the projects be portfolio-worthy? I'd like to showcase them to potential employers."
                 },
                 {
-                    author: "👨‍🏫 Dr. John Smith (Instructor)",
+                    author: "\u{1F468}\u200D\u{1F3EB} Dr. John Smith (Instructor)",
                     date: "Nov 26, 2024 at 3:30 PM",
                     text: "That's a great idea, Marcus! We'll definitely focus on creating portfolio-quality projects."
                 }
@@ -505,46 +507,48 @@
         const poll = pollData[pollId];
 
         if (!poll) {
-            window.location.href = 'index.html';
+            window.location.href = '/';
             return;
         }
 
         document.getElementById('pollQuestion').textContent = poll.title;
-        document.getElementById('pollMeta').textContent = `Active until ${poll.closeDate} | ${poll.totalVotes} Total Votes | ${poll.participants} Participants`;
+        document.getElementById('pollMeta').textContent = 'Active until ' + poll.closeDate + ' | ' + poll.totalVotes + ' Total Votes | ' + poll.participants + ' Participants';
         document.getElementById('totalVotes').textContent = poll.totalVotes;
         document.getElementById('participants').textContent = poll.participants;
         document.getElementById('closeDate').textContent = poll.closeDate;
         document.getElementById('pollStatus2').textContent = poll.status;
 
-        const optionsHTML = poll.options.map((option, index) => `
-            <div class="poll-option" onclick="selectOption(${index + 1})">
-                <div class="option-label">
-                    <input type="radio" id="option${index + 1}" name="poll_option" value="${index + 1}">
-                    <label for="option${index + 1}" class="mb-0">${option.label}</label>
-                </div>
-                <div class="option-stats">
-                    <div class="progress-bar-custom" style="width: ${option.percentage}%;">${option.percentage}%</div>
-                    <span class="vote-count">${option.votes} votes</span>
-                </div>
-            </div>
-        `).join('');
+        var optionsHTML = '';
+        poll.options.forEach(function(option, index) {
+            optionsHTML += '<div class="poll-option" onclick="selectOption(' + (index + 1) + ')">' +
+                '<div class="option-label">' +
+                    '<input type="radio" id="option' + (index + 1) + '" name="poll_option" value="' + (index + 1) + '">' +
+                    '<label for="option' + (index + 1) + '" class="mb-0">' + option.label + '</label>' +
+                '</div>' +
+                '<div class="option-stats">' +
+                    '<div class="progress-bar-custom" style="width: ' + option.percentage + '%;">' + option.percentage + '%</div>' +
+                    '<span class="vote-count">' + option.votes + ' votes</span>' +
+                '</div>' +
+            '</div>';
+        });
         document.getElementById('pollOptions').innerHTML = optionsHTML;
 
-        const commentsHTML = poll.comments.map(comment => `
-            <div class="comment-item">
-                <div class="comment-author">${comment.author}</div>
-                <div class="comment-date">${comment.date}</div>
-                <div class="comment-text">${comment.text}</div>
-            </div>
-        `).join('');
+        var commentsHTML = '';
+        poll.comments.forEach(function(comment) {
+            commentsHTML += '<div class="comment-item">' +
+                '<div class="comment-author">' + comment.author + '</div>' +
+                '<div class="comment-date">' + comment.date + '</div>' +
+                '<div class="comment-text">' + comment.text + '</div>' +
+            '</div>';
+        });
         document.getElementById('commentsSection').innerHTML = commentsHTML;
     }
 
     function selectOption(optionNumber) {
-        const radioButton = document.getElementById('option' + optionNumber);
+        var radioButton = document.getElementById('option' + optionNumber);
         radioButton.checked = true;
 
-        document.querySelectorAll('.poll-option').forEach((option, index) => {
+        document.querySelectorAll('.poll-option').forEach(function(option, index) {
             if (index === optionNumber - 1) {
                 option.classList.add('selected');
             } else {
@@ -554,7 +558,7 @@
     }
 
     function checkAuthStatus() {
-        const isLoggedIn = localStorage.getItem('currentUser');
+        var isLoggedIn = localStorage.getItem('currentUser');
         if (!isLoggedIn) {
             document.getElementById('pollForm').style.display = 'none';
             document.getElementById('commentForm').style.display = 'none';
@@ -564,13 +568,12 @@
 
     document.getElementById('pollForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        const selectedOption = document.querySelector('input[name="poll_option"]:checked');
+        var selectedOption = document.querySelector('input[name="poll_option"]:checked');
         if (selectedOption) {
-            const optionText = document.querySelector(`label[for="option${selectedOption.value}"]`).textContent;
+            var optionText = document.querySelector('label[for="option' + selectedOption.value + '"]').textContent;
             alert('Your vote for "' + optionText + '" has been recorded!');
-            // Update UI to show that user has voted
             document.getElementById('pollInfoBox').classList.add('voted');
-            document.getElementById('pollStatus').textContent = '✓ You voted for: ' + optionText;
+            document.getElementById('pollStatus').textContent = '\u2713 You voted for: ' + optionText;
             document.getElementById('submitVoteBtn').style.display = 'none';
             document.getElementById('editVoteBtn').style.display = 'inline-block';
         }
@@ -585,7 +588,7 @@
 
     document.getElementById('commentForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        const commentText = document.getElementById('commentText').value;
+        var commentText = document.getElementById('commentText').value;
         if (commentText.trim()) {
             alert('Your comment has been posted!');
             document.getElementById('commentText').value = '';

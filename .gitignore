@@ -34,3 +34,7 @@ build
 
 # Ignore VS Code settings directory
 .vscode
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml

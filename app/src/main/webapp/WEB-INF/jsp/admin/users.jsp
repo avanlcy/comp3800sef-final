@@ -35,7 +35,7 @@
     <div class="container-lg">
         <div class="d-flex justify-content-between align-items-center">
             <div>
-                <h1>&#128101; <spring:message code="admin.userManagement"/></h1>
+                <h1><spring:message code="admin.userManagement"/></h1>
                 <p class="mb-0" style="opacity: 0.9;">Manage all user accounts</p>
             </div>
             <a href="${pageContext.request.contextPath}/admin/users/add" class="btn btn-light btn-lg">

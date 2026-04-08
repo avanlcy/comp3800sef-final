@@ -31,7 +31,7 @@
 
 <div class="page-header">
     <div class="container-lg">
-        <h1>&#128499; <spring:message code="poll.addPoll"/></h1>
+        <h1><spring:message code="poll.addPoll"/></h1>
         <p class="mb-0" style="opacity: 0.9;">Create a new poll with options</p>
     </div>
 </div>

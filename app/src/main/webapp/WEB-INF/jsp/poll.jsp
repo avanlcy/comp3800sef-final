@@ -64,7 +64,7 @@
     <div class="container-lg">
         <div class="d-flex justify-content-between align-items-start">
             <div>
-                <div class="poll-title">&#128499; <c:out value="${poll.question}"/></div>
+                <div class="poll-title"><c:out value="${poll.question}"/></div>
                 <div style="font-size: 0.95rem; opacity: 0.9;">
                     <c:set var="totalVotes" value="0"/>
                     <c:forEach var="option" items="${poll.options}">
@@ -100,7 +100,7 @@
                 <p class="mb-0">
                     <c:choose>
                         <c:when test="${not empty userVoteOptionId}">
-                            &#10003; You have voted on this poll. You can update your vote below.
+                            You have voted on this poll. You can update your vote below.
                         </c:when>
                         <c:otherwise>
                             You haven't voted yet. Please select an option below.
@@ -150,7 +150,7 @@
             </form>
 
             <!-- Comments -->
-            <div class="section-title">&#128172; <spring:message code="comments.title"/></div>
+            <div class="section-title"><spring:message code="comments.title"/></div>
 
             <!-- Comment Form -->
             <div class="comment-form">

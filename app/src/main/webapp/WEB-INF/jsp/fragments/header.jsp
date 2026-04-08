@@ -118,7 +118,7 @@
                                 <label for="loginPassword" class="form-label"><spring:message code="user.password"/></label>
                                 <div class="position-relative">
                                     <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Enter your password" required>
-                                    <span style="cursor:pointer;position:absolute;right:10px;top:50%;transform:translateY(-50%);" onclick="togglePassword('loginPassword')">&#128065;</span>
+                                    <span style="cursor:pointer;position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:0.85rem;" onclick="togglePassword('loginPassword')">Show</span>
                                 </div>
                             </div>
                             <button type="submit" class="btn w-100" style="background-color:#667eea;border-color:#667eea;color:white;">
@@ -151,7 +151,7 @@
                                 <label for="regPassword" class="form-label"><spring:message code="user.password"/></label>
                                 <div class="position-relative">
                                     <input type="password" class="form-control" id="regPassword" name="password" placeholder="Create a password" required>
-                                    <span style="cursor:pointer;position:absolute;right:10px;top:50%;transform:translateY(-50%);" onclick="togglePassword('regPassword')">&#128065;</span>
+                                    <span style="cursor:pointer;position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:0.85rem;" onclick="togglePassword('regPassword')">Show</span>
                                 </div>
                             </div>
                             <div class="mb-3">

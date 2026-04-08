@@ -30,7 +30,7 @@
 
 <div class="page-header">
     <div class="container-lg">
-        <h1>&#128218; <spring:message code="lecture.addLecture"/></h1>
+        <h1><spring:message code="lecture.addLecture"/></h1>
         <p class="mb-0" style="opacity: 0.9;">Create a new lecture with materials</p>
     </div>
 </div>

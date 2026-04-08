@@ -62,7 +62,7 @@
                             <label for="password" class="form-label"><spring:message code="user.password"/></label>
                             <div class="password-input-group">
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" required>
-                                <span class="toggle-password" onclick="togglePassword('password')">&#128065;</span>
+                                <span class="toggle-password" onclick="togglePassword('password')">Show</span>
                             </div>
                         </div>
                         <div class="mb-3">

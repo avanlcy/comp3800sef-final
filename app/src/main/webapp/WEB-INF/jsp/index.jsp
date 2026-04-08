@@ -62,7 +62,7 @@
 
     <!-- Lectures Section -->
     <div class="d-flex justify-content-between align-items-center">
-        <div class="section-title" style="flex-grow:1;">&#128218; <spring:message code="index.lectures"/></div>
+        <div class="section-title" style="flex-grow:1;"><spring:message code="index.lectures"/></div>
         <c:if test="${pageContext.request.isUserInRole('ROLE_TEACHER')}">
             <a href="${pageContext.request.contextPath}/lectures/add" class="btn btn-add ms-3">
                 <spring:message code="index.addLecture"/>
@@ -107,7 +107,7 @@
 
     <!-- Polls Section -->
     <div class="d-flex justify-content-between align-items-center">
-        <div class="section-title" style="flex-grow:1;">&#128499; <spring:message code="index.polls"/></div>
+        <div class="section-title" style="flex-grow:1;"><spring:message code="index.polls"/></div>
         <c:if test="${pageContext.request.isUserInRole('ROLE_TEACHER')}">
             <a href="${pageContext.request.contextPath}/polls/add" class="btn btn-add ms-3">
                 <spring:message code="index.addPoll"/>
@@ -144,11 +144,11 @@
                 <div class="card-body">
                     <ul class="list-unstyled">
                         <c:if test="${pageContext.request.userPrincipal == null}">
-                            <li><a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showAuthTab('login')">&#128221; <spring:message code="nav.login"/></a></li>
-                            <li><a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showAuthTab('register')">&#128203; <spring:message code="nav.register"/></a></li>
+                            <li><a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showAuthTab('login')"><spring:message code="nav.login"/></a></li>
+                            <li><a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showAuthTab('register')"><spring:message code="nav.register"/></a></li>
                         </c:if>
                         <c:if test="${pageContext.request.userPrincipal != null}">
-                            <li><a href="${pageContext.request.contextPath}/profile" class="text-decoration-none">&#128100; <spring:message code="nav.profile"/></a></li>
+                            <li><a href="${pageContext.request.contextPath}/profile" class="text-decoration-none"><spring:message code="nav.profile"/></a></li>
                         </c:if>
                     </ul>
                 </div>

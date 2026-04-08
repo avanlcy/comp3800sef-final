@@ -81,12 +81,11 @@
     <div class="row">
         <div class="col-lg-8">
             <!-- Download Materials -->
-            <div class="section-title">&#128229; <spring:message code="lecture.materials"/></div>
+            <div class="section-title"><spring:message code="lecture.materials"/></div>
             <div class="lecture-notes">
                 <c:if test="${not empty lecture.materials}">
                     <c:forEach var="material" items="${lecture.materials}">
                         <div class="note-item">
-                            <span class="note-icon">&#128196;</span>
                             <div class="note-content">
                                 <a href="${pageContext.request.contextPath}/files/${material.id}" class="note-filename">
                                     <c:out value="${material.fileName}"/>
@@ -124,13 +123,13 @@
             </c:if>
 
             <!-- Summary -->
-            <div class="section-title">&#128214; <spring:message code="lecture.summary"/></div>
+            <div class="section-title"><spring:message code="lecture.summary"/></div>
             <div class="summary-content">
                 <c:out value="${lecture.summary}"/>
             </div>
 
             <!-- Comments -->
-            <div class="section-title">&#128172; <spring:message code="comments.title"/></div>
+            <div class="section-title"><spring:message code="comments.title"/></div>
 
             <!-- Comment Form -->
             <div class="comment-form">

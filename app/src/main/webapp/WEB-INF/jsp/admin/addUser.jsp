@@ -30,7 +30,7 @@
 
 <div class="page-header">
     <div class="container-lg">
-        <h1>&#128100; <spring:message code="admin.addUser"/></h1>
+        <h1><spring:message code="admin.addUser"/></h1>
         <p class="mb-0" style="opacity: 0.9;">Create a new user account</p>
     </div>
 </div>

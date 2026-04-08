@@ -30,7 +30,7 @@
 
 <div class="profile-header">
     <div class="container-lg">
-        <h1>&#128100; <spring:message code="profile.title"/></h1>
+        <h1><spring:message code="profile.title"/></h1>
         <p class="mb-0" style="opacity: 0.9;">Manage your account information</p>
     </div>
 </div>
@@ -68,7 +68,7 @@
                             <input type="password" class="form-control" id="password" name="password"
                                    placeholder="Leave blank to keep current password">
                             <button class="btn btn-outline-secondary" type="button" id="togglePassword">
-                                &#128065;
+                                Show
                             </button>
                         </div>
                         <div class="form-text">Only fill in if you want to change your password.</div>

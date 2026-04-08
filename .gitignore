@@ -38,3 +38,6 @@ build
 # Ignore IntelliJ IDEA project files
 .idea/
 *.iml
+
+# H2 database files
+*.mv.db

@@ -233,45 +233,17 @@
     <div class="section-title">&#128218; Course Materials</div>
     <div class="row">
         <div class="col-md-8">
-            <a href="/lecture?id=1" class="text-decoration-none">
-                <div class="lecture-card">
-                    <div class="lecture-title">Lecture 1: Introduction to Web Development</div>
-                    <div class="lecture-preview">
-                        Overview of web technologies, client-server architecture, and the evolution of web frameworks.
+            <c:forEach var="lec" items="${lectureList}">
+                <a href="/lecture?id=${lec.id}" class="text-decoration-none">
+                    <div class="lecture-card">
+                        <div class="lecture-title"><c:out value="${lec.title}"/></div>
+                        <div class="lecture-preview">
+                            <c:out value="${lec.preview}"/>
+                        </div>
+                        <span class="btn-view">View Materials</span>
                     </div>
-                    <span class="btn-view">View Materials</span>
-                </div>
-            </a>
-
-            <a href="/lecture?id=2" class="text-decoration-none">
-                <div class="lecture-card">
-                    <div class="lecture-title">Lecture 2: Jakarta EE Fundamentals</div>
-                    <div class="lecture-preview">
-                        Understanding Jakarta EE components, servlet technology, JSP pages, and enterprise applications.
-                    </div>
-                    <span class="btn-view">View Materials</span>
-                </div>
-            </a>
-
-            <a href="/lecture?id=3" class="text-decoration-none">
-                <div class="lecture-card">
-                    <div class="lecture-title">Lecture 3: Spring Framework Basics</div>
-                    <div class="lecture-preview">
-                        Introduction to Spring Framework, dependency injection, and the Spring MVC architecture.
-                    </div>
-                    <span class="btn-view">View Materials</span>
-                </div>
-            </a>
-
-            <a href="/lecture?id=4" class="text-decoration-none">
-                <div class="lecture-card">
-                    <div class="lecture-title">Lecture 4: Spring Boot Development</div>
-                    <div class="lecture-preview">
-                        Building applications with Spring Boot, auto-configuration, and embedded servers.
-                    </div>
-                    <span class="btn-view">View Materials</span>
-                </div>
-            </a>
+                </a>
+            </c:forEach>
         </div>
         <div class="col-md-4">
             <div class="card border-info">
@@ -292,40 +264,14 @@
     <div class="section-title">&#128499;&#65039; Community Polls</div>
     <div class="row">
         <div class="col-md-8">
-            <a href="/poll?id=1" class="text-decoration-none">
-                <div class="poll-card">
-                    <div class="poll-question">Which topic should be introduced in the next class?</div>
-                    <div class="poll-info">Total votes: 145 &bull; Active until Dec 15</div>
-                </div>
-            </a>
-
-            <a href="/poll?id=2" class="text-decoration-none">
-                <div class="poll-card">
-                    <div class="poll-question">Preferred pace of the course?</div>
-                    <div class="poll-info">Total votes: 98 &bull; Active until Dec 20</div>
-                </div>
-            </a>
-
-            <a href="/poll?id=3" class="text-decoration-none">
-                <div class="poll-card">
-                    <div class="poll-question">Best time for optional review sessions?</div>
-                    <div class="poll-info">Total votes: 67 &bull; Active until Dec 22</div>
-                </div>
-            </a>
-
-            <a href="/poll?id=4" class="text-decoration-none">
-                <div class="poll-card">
-                    <div class="poll-question">Preferred assignment format?</div>
-                    <div class="poll-info">Total votes: 112 &bull; Active until Dec 25</div>
-                </div>
-            </a>
-
-            <a href="/poll?id=5" class="text-decoration-none">
-                <div class="poll-card">
-                    <div class="poll-question">Would you like more practical projects?</div>
-                    <div class="poll-info">Total votes: 156 &bull; Active until Dec 28</div>
-                </div>
-            </a>
+            <c:forEach var="p" items="${pollList}">
+                <a href="/poll?id=${p.id}" class="text-decoration-none">
+                    <div class="poll-card">
+                        <div class="poll-question"><c:out value="${p.title}"/></div>
+                        <div class="poll-info">Total votes: <c:out value="${p.votes}"/> &bull; Active until <c:out value="${p.deadline}"/></div>
+                    </div>
+                </a>
+            </c:forEach>
         </div>
         <div class="col-md-4">
             <div class="card border-warning">

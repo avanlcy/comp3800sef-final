@@ -48,8 +48,8 @@ public class DataInitializer implements CommandLineRunner {
         User teacher2 = new User();
         teacher2.setUsername("teacher2");
         teacher2.setPassword(passwordEncoder.encode("password"));
-        teacher2.setFullName("Jane Doe");
-        teacher2.setEmail("jane.doe@example.com");
+        teacher2.setFullName("Peter Johnson");
+        teacher2.setEmail("peter.johnson@example.com");
         teacher2.setPhone("87654321");
         teacher2.setRole("ROLE_TEACHER");
         userRepository.save(teacher2);
@@ -66,8 +66,8 @@ public class DataInitializer implements CommandLineRunner {
         User student2 = new User();
         student2.setUsername("student2");
         student2.setPassword(passwordEncoder.encode("password"));
-        student2.setFullName("Bob Chen");
-        student2.setEmail("bob.chen@example.com");
+        student2.setFullName("Ben Chen");
+        student2.setEmail("ben.chen@example.com");
         student2.setPhone("33334444");
         student2.setRole("ROLE_STUDENT");
         userRepository.save(student2);
@@ -75,8 +75,8 @@ public class DataInitializer implements CommandLineRunner {
         User student3 = new User();
         student3.setUsername("student3");
         student3.setPassword(passwordEncoder.encode("password"));
-        student3.setFullName("Charlie Lee");
-        student3.setEmail("charlie.lee@example.com");
+        student3.setFullName("Mike Lee");
+        student3.setEmail("mike.lee@example.com");
         student3.setPhone("55556666");
         student3.setRole("ROLE_STUDENT");
         userRepository.save(student3);

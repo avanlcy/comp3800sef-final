@@ -34,3 +34,7 @@ build
 
 # Ignore VS Code settings directory
 .vscode
+
+# H2 database files
+*.mv.db
+*.trace.db

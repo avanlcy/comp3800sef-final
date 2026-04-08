@@ -1,321 +1,182 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Poll - LMS</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .navbar {
-            background-color: #2c3e50;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
-        .breadcrumb-section {
-            background-color: white;
-            padding: 20px 0;
-            border-bottom: 1px solid #e0e0e0;
-            margin-bottom: 30px;
-        }
-        .poll-header {
-            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
-            color: white;
-            padding: 30px 0;
-            margin-bottom: 30px;
-        }
-        .poll-title {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .poll-meta {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #f39c12;
-            padding-bottom: 10px;
-        }
-        .poll-options {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border-left: 4px solid #f39c12;
-        }
-        .poll-option {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s, box-shadow 0.3s;
-        }
-        .poll-option:hover {
-            background-color: #e9ecef;
-        }
-        .poll-option.selected {
-            background-color: #fff3cd;
-            border: 2px solid #f39c12;
-        }
-        .poll-option input[type="radio"] {
-            margin-right: 10px;
-            cursor: pointer;
-        }
-        .option-label {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            font-weight: 500;
-            color: #2c3e50;
-        }
-        .option-stats {
-            display: flex;
-            align-items: center;
-            margin-left: 28px;
-        }
-        .progress-bar-custom {
-            background-color: #f39c12;
-            height: 24px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 10px;
-            color: white;
-            font-size: 0.85rem;
-            font-weight: bold;
-            min-width: 50px;
-        }
-        .vote-count {
-            margin-left: 10px;
-            color: #666;
-            font-size: 0.9rem;
-            min-width: 80px;
-        }
-        .poll-actions {
-            margin-top: 20px;
-            display: flex;
-            gap: 10px;
-        }
-        .btn-vote {
-            background-color: #f39c12;
-            border-color: #f39c12;
-            color: white;
-            padding: 10px 30px;
-            font-weight: bold;
-        }
-        .btn-vote:hover {
-            background-color: #e67e22;
-            border-color: #e67e22;
-            color: white;
-        }
-        .btn-edit {
-            background-color: #3498db;
-            border-color: #3498db;
-            color: white;
-            padding: 10px 30px;
-            font-weight: bold;
-        }
-        .btn-edit:hover {
-            background-color: #2980b9;
-            border-color: #2980b9;
-            color: white;
-        }
-        .poll-info-box {
-            background-color: #ecf0f1;
-            padding: 15px;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            border-left: 4px solid #3498db;
-        }
-        .poll-info-box.voted {
-            background-color: #d5f4e6;
-            border-left-color: #27ae60;
-        }
-        .comments-section {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border-left: 4px solid #e74c3c;
-        }
-        .comment-item {
-            padding: 15px;
-            border-bottom: 1px solid #e0e0e0;
-            margin-bottom: 15px;
-        }
-        .comment-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-        .comment-author {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-        .comment-date {
-            color: #999;
-            font-size: 0.85rem;
-            margin-bottom: 10px;
-        }
-        .comment-text {
-            color: #555;
-            line-height: 1.5;
-        }
-        .comment-form {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .form-control:focus {
-            border-color: #f39c12;
-            box-shadow: 0 0 0 0.2rem rgba(243, 156, 18, 0.25);
-        }
-        .btn-primary-custom {
-            background-color: #f39c12;
-            border-color: #f39c12;
-            color: white;
-        }
-        .btn-primary-custom:hover {
-            background-color: #e67e22;
-            border-color: #e67e22;
-            color: white;
-        }
-        .auth-alert {
-            background-color: #fff3cd;
-            border: 1px solid #ffc107;
-            padding: 15px;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
-        .auth-alert a {
-            color: #0c5460;
-            font-weight: bold;
-        }
-    </style>
+    <title><c:out value="${poll.question}"/> - <spring:message code="app.name"/></title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/app.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-lg">
-        <a class="navbar-brand" href="/">LMS</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
+<%@ include file="fragments/header.jsp" %>
 
 <div class="breadcrumb-section">
     <div class="container-lg">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active">Community Poll</li>
+                <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/"><spring:message code="nav.home"/></a></li>
+                <li class="breadcrumb-item active"><spring:message code="index.polls"/></li>
             </ol>
         </nav>
     </div>
 </div>
 
-
 <div class="poll-header">
     <div class="container-lg">
-        <div class="poll-title" id="pollTitle">&#128499;&#65039; Community Poll</div>
-        <div class="poll-meta" id="pollMeta">
-            Active until Mar 15, 2026 | 145 Total Votes | 87 Participants
+        <div class="d-flex justify-content-between align-items-start">
+            <div>
+                <div class="poll-title"><c:out value="${poll.question}"/></div>
+                <div class="text-muted" style="font-size: 0.9rem;">
+                    <c:set var="totalVotes" value="0"/>
+                    <c:forEach var="option" items="${poll.options}">
+                        <c:set var="totalVotes" value="${totalVotes + option.voteCount}"/>
+                    </c:forEach>
+                    ${totalVotes} Total Votes
+                </div>
+            </div>
+            <c:if test="${pageContext.request.isUserInRole('ROLE_TEACHER')}">
+                <form action="${pageContext.request.contextPath}/polls/${poll.id}/delete" method="post"
+                      class="d-inline" onsubmit="return confirm('Are you sure you want to delete this poll?')">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    <button type="submit" class="btn btn-danger btn-sm"><spring:message code="action.delete"/></button>
+                </form>
+            </c:if>
         </div>
     </div>
 </div>
 
 <div class="container-lg">
+    <c:if test="${not empty success}">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <c:out value="${success}"/>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    </c:if>
+
     <div class="row">
         <div class="col-lg-12">
-            <div class="section-title">Poll Question</div>
-            <div class="poll-info-box" id="pollInfoBox">
-                <h5 class="mb-3" id="pollQuestion">Which topic should be introduced in the next class?</h5>
-                <p class="mb-0" id="pollStatus">You haven't voted yet. Please select an option below.</p>
-            </div>
-
-            <!-- Authentication Alert (for unregistered users) -->
-            <div class="auth-alert" id="authAlert" style="display: none;">
-                <strong>&#9888;&#65039; Please Log In</strong><br>
-                You need to be logged in to vote on polls. <a href="javascript:void(0);" onclick="alert('Please login from the home page')">Click here to login</a> or <a href="javascript:void(0);" onclick="alert('Please register from the home page')">register</a> if you don't have an account.
+            <div class="section-title"><spring:message code="poll.question"/></div>
+            <div class="poll-info-box <c:if test='${not empty userVoteOptionId}'>voted</c:if>">
+                <h5 class="mb-3"><c:out value="${poll.question}"/></h5>
+                <p class="mb-0">
+                    <c:choose>
+                        <c:when test="${not empty userVoteOptionId}">
+                            You have voted on this poll. You can update your vote below.
+                        </c:when>
+                        <c:otherwise>
+                            You haven't voted yet. Please select an option below.
+                        </c:otherwise>
+                    </c:choose>
+                </p>
             </div>
 
             <div class="section-title">Voting Options</div>
-            <form id="pollForm">
-                <div class="poll-options" id="pollOptions">
+            <form action="${pageContext.request.contextPath}/polls/${poll.id}/vote" method="post">
+                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <div class="poll-options">
+                    <c:forEach var="option" items="${poll.options}" varStatus="status">
+                        <div class="poll-option <c:if test='${option.id == userVoteOptionId}'>selected</c:if>"
+                             onclick="selectOption(${status.index + 1})">
+                            <div class="option-label">
+                                <input type="radio" id="option${status.index + 1}" name="optionId"
+                                       value="${option.id}" required
+                                       <c:if test="${option.id == userVoteOptionId}">checked</c:if>>
+                                <label for="option${status.index + 1}" class="mb-0">
+                                    <c:out value="${option.optionText}"/>
+                                </label>
+                            </div>
+                            <div class="option-stats">
+                                <c:set var="percentage" value="${totalVotes > 0 ? Math.round(option.voteCount * 100.0 / totalVotes) : 0}"/>
+                                <div class="progress-bar-custom" style="width: ${percentage > 0 ? percentage : 5}%;">
+                                    ${percentage}%
+                                </div>
+                                <span class="vote-count">${option.voteCount} <spring:message code="poll.votes"/></span>
+                            </div>
+                        </div>
+                    </c:forEach>
                 </div>
 
-                <div class="poll-actions" id="pollActions">
-                    <button type="submit" class="btn btn-vote" id="submitVoteBtn">Submit Vote</button>
-                    <button type="button" class="btn btn-edit" id="editVoteBtn" style="display: none;">Edit Vote</button>
+                <div class="mt-3 mb-4">
+                    <button type="submit" class="btn btn-vote">
+                        <c:choose>
+                            <c:when test="${not empty userVoteOptionId}">
+                                <spring:message code="poll.updateVote"/>
+                            </c:when>
+                            <c:otherwise>
+                                <spring:message code="poll.submitVote"/>
+                            </c:otherwise>
+                        </c:choose>
+                    </button>
                 </div>
             </form>
 
-            <div>
-                <div class="section-title">&#128172; Discussion</div>
+            <!-- Comments -->
+            <div class="section-title"><spring:message code="comments.title"/></div>
 
-                <!-- Comment Form (visible only to registered users) -->
-                <div class="comment-form" id="commentForm">
-                    <div class="form-group mb-3">
-                        <label for="commentText" class="form-label"><strong>Join the Discussion</strong></label>
-                        <textarea class="form-control" id="commentText" rows="4" placeholder="Share your thoughts about this poll..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary-custom">Post Comment</button>
-                </div>
-
-                <!-- Existing Comments -->
-                <div class="comments-section" id="commentsSection">
-                    <!-- Comments loaded dynamically -->
+            <!-- Comment Form -->
+            <div class="comment-form">
+                <div class="form-group mb-3">
+                    <label for="commentText" class="form-label"><strong><spring:message code="comments.addComment"/></strong></label>
+                    <form action="${pageContext.request.contextPath}/polls/${poll.id}/comments/add" method="post">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        <textarea class="form-control mb-3" id="commentText" name="content" rows="4"
+                                  placeholder="Share your thoughts about this poll..." required></textarea>
+                        <button type="submit" class="btn btn-primary-custom"><spring:message code="comments.submit"/></button>
+                    </form>
                 </div>
             </div>
 
-            <!-- Poll Stat -->
-            <div class="row mt-5 mb-5">
-                <div class="col-md-6">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-header bg-light">
-                            <strong>Poll Statistics</strong>
+            <!-- Existing Comments -->
+            <div class="comments-section">
+                <c:forEach var="comment" items="${poll.comments}">
+                    <div class="comment-item">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <div class="comment-author">
+                                    <c:out value="${comment.user.fullName}"/>
+                                    <small class="text-muted">(<c:out value="${comment.user.username}"/>)</small>
+                                </div>
+                                <div class="comment-date">${comment.createdAt}</div>
+                            </div>
+                            <c:if test="${pageContext.request.isUserInRole('ROLE_TEACHER')}">
+                                <form action="${pageContext.request.contextPath}/polls/${poll.id}/comments/${comment.id}/delete"
+                                      method="post" class="d-inline" onsubmit="return confirm('Are you sure?')">
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                                    <button type="submit" class="btn btn-danger btn-sm"><spring:message code="action.delete"/></button>
+                                </form>
+                            </c:if>
                         </div>
+                        <div class="comment-text"><c:out value="${comment.content}"/></div>
+                    </div>
+                </c:forEach>
+                <c:if test="${empty poll.comments}">
+                    <p class="text-muted"><spring:message code="comments.noComments"/></p>
+                </c:if>
+            </div>
+
+            <!-- Poll Statistics -->
+            <div class="row mt-4 mb-5">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Poll Statistics</div>
                         <div class="card-body">
-                            <p class="mb-2">
-                                <strong>Total Votes:</strong> <span class="badge bg-warning text-dark" id="totalVotes">145</span>
-                            </p>
-                            <p class="mb-2">
-                                <strong>Participants:</strong> <span class="badge bg-info" id="participants">87</span>
-                            </p>
-                            <p class="mb-2">
-                                <strong>Status:</strong> <span class="badge bg-success" id="pollStatus2">Active</span>
-                            </p>
-                            <p class="mb-0">
-                                <strong>Closes:</strong> <span id="closeDate">Mar 15, 2026</span>
-                            </p>
+                            <p class="mb-2"><strong>Total Votes:</strong> ${totalVotes}</p>
+                            <p class="mb-2"><strong>Options:</strong> ${poll.options.size()}</p>
+                            <p class="mb-0"><strong>Comments:</strong> ${poll.comments.size()}</p>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-end">
+                    <a href="${pageContext.request.contextPath}/" class="btn btn-secondary w-100">
+                        <spring:message code="action.backToHome"/>
+                    </a>
                 </div>
             </div>
         </div>
@@ -326,57 +187,11 @@
     </footer>
 </div>
 
-<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.bundle.min.js"></script>
 <script>
-    const pollData = ${pollDataJson};
-
-    function loadPoll() {
-        const params = new URLSearchParams(window.location.search);
-        const pollId = params.get('id') || 1;
-        const poll = pollData[pollId];
-
-        if (!poll) {
-            window.location.href = '/';
-            return;
-        }
-
-        document.getElementById('pollQuestion').textContent = poll.title;
-        document.getElementById('pollMeta').textContent = 'Active until ' + poll.closeDate + ' | ' + poll.totalVotes + ' Total Votes | ' + poll.participants + ' Participants';
-        document.getElementById('totalVotes').textContent = poll.totalVotes;
-        document.getElementById('participants').textContent = poll.participants;
-        document.getElementById('closeDate').textContent = poll.closeDate;
-        document.getElementById('pollStatus2').textContent = poll.status;
-
-        var optionsHTML = '';
-        poll.options.forEach(function(option, index) {
-            optionsHTML += '<div class="poll-option" onclick="selectOption(' + (index + 1) + ')">' +
-                '<div class="option-label">' +
-                    '<input type="radio" id="option' + (index + 1) + '" name="poll_option" value="' + (index + 1) + '">' +
-                    '<label for="option' + (index + 1) + '" class="mb-0">' + option.label + '</label>' +
-                '</div>' +
-                '<div class="option-stats">' +
-                    '<div class="progress-bar-custom" style="width: ' + option.percentage + '%;">' + option.percentage + '%</div>' +
-                    '<span class="vote-count">' + option.votes + ' votes</span>' +
-                '</div>' +
-            '</div>';
-        });
-        document.getElementById('pollOptions').innerHTML = optionsHTML;
-
-        var commentsHTML = '';
-        poll.comments.forEach(function(comment) {
-            commentsHTML += '<div class="comment-item">' +
-                '<div class="comment-author">' + comment.author + '</div>' +
-                '<div class="comment-date">' + comment.date + '</div>' +
-                '<div class="comment-text">' + comment.text + '</div>' +
-            '</div>';
-        });
-        document.getElementById('commentsSection').innerHTML = commentsHTML;
-    }
-
     function selectOption(optionNumber) {
         var radioButton = document.getElementById('option' + optionNumber);
         radioButton.checked = true;
-
         document.querySelectorAll('.poll-option').forEach(function(option, index) {
             if (index === optionNumber - 1) {
                 option.classList.add('selected');
@@ -385,49 +200,6 @@
             }
         });
     }
-
-    function checkAuthStatus() {
-        var isLoggedIn = localStorage.getItem('currentUser');
-        if (!isLoggedIn) {
-            document.getElementById('pollForm').style.display = 'none';
-            document.getElementById('commentForm').style.display = 'none';
-            document.getElementById('authAlert').style.display = 'block';
-        }
-    }
-
-    document.getElementById('pollForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        var selectedOption = document.querySelector('input[name="poll_option"]:checked');
-        if (selectedOption) {
-            var optionText = document.querySelector('label[for="option' + selectedOption.value + '"]').textContent;
-            alert('Your vote for "' + optionText + '" has been recorded!');
-            document.getElementById('pollInfoBox').classList.add('voted');
-            document.getElementById('pollStatus').textContent = '\u2713 You voted for: ' + optionText;
-            document.getElementById('submitVoteBtn').style.display = 'none';
-            document.getElementById('editVoteBtn').style.display = 'inline-block';
-        }
-    });
-
-    document.getElementById('editVoteBtn').addEventListener('click', function() {
-        document.getElementById('submitVoteBtn').style.display = 'inline-block';
-        document.getElementById('editVoteBtn').style.display = 'none';
-        document.getElementById('pollInfoBox').classList.remove('voted');
-        document.getElementById('pollStatus').textContent = 'You haven\'t voted yet. Please select an option below.';
-    });
-
-    document.getElementById('commentForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        var commentText = document.getElementById('commentText').value;
-        if (commentText.trim()) {
-            alert('Your comment has been posted!');
-            document.getElementById('commentText').value = '';
-        }
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        loadPoll();
-        checkAuthStatus();
-    });
 </script>
 </body>
 </html>

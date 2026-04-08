@@ -1,8 +1,7 @@
 package comp3800sef.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import comp3800sef.config.DataInitializer;
+import comp3800sef.repository.LectureRepository;
+import comp3800sef.repository.PollRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,30 +9,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-    private final DataInitializer dataInitializer;
-    private final ObjectMapper objectMapper;
+    private final LectureRepository lectureRepository;
+    private final PollRepository pollRepository;
 
-    public HomeController(DataInitializer dataInitializer, ObjectMapper objectMapper) {
-        this.dataInitializer = dataInitializer;
-        this.objectMapper = objectMapper;
+    public HomeController(LectureRepository lectureRepository, PollRepository pollRepository) {
+        this.lectureRepository = lectureRepository;
+        this.pollRepository = pollRepository;
     }
 
     @GetMapping("/")
-    public String home(Model model) {
-        model.addAttribute("lectureList", dataInitializer.getLectureListData());
-        model.addAttribute("pollList", dataInitializer.getPollListData());
+    public String index(Model model) {
+        model.addAttribute("lectures", lectureRepository.findAll());
+        model.addAttribute("polls", pollRepository.findAll());
         return "index";
-    }
-
-    @GetMapping("/lecture")
-    public String lecture(Model model) throws JsonProcessingException {
-        model.addAttribute("lectureDataJson", objectMapper.writeValueAsString(dataInitializer.getLectureData()));
-        return "lecture";
-    }
-
-    @GetMapping("/poll")
-    public String poll(Model model) throws JsonProcessingException {
-        model.addAttribute("pollDataJson", objectMapper.writeValueAsString(dataInitializer.getPollData()));
-        return "poll";
     }
 }

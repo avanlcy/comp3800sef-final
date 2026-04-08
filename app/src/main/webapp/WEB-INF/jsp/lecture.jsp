@@ -195,7 +195,7 @@
     <div class="container-lg">
         <div class="lecture-title" id="lectureTitle">Lecture 1: Introduction to Web Development</div>
         <div class="lecture-meta" id="lectureMeta">
-            &#128197; Published on Nov 1, 2024 | &#9201;&#65039; Duration: 90 minutes | &#128205; Week 1
+            &#128197; Published on Nov 1, 2026 | &#9201;&#65039; Duration: 90 minutes | &#128205; Week 1
         </div>
     </div>
 </div>
@@ -264,7 +264,7 @@
 
 
     <footer class="text-center py-4 mt-5 border-top">
-        <p class="text-muted">&copy; 2024 Learning Management System. All rights reserved.</p>
+        <p class="text-muted">&copy; 2026 Learning Management System. All rights reserved.</p>
     </footer>
 </div>
 
@@ -278,7 +278,7 @@
             week: "Week 1",
             duration: "90 minutes",
             difficulty: "Beginner",
-            date: "Nov 1, 2024",
+            date: "Nov 1, 2026",
             notes: [
                 { icon: "\u{1F4C4}", name: "Lecture_1_Introduction_to_Web_Development.pdf", size: "1.8 MB \u2022 PDF" },
                 { icon: "\u{1F3A5}", name: "Lecture_1_Recording.mp4", size: "142 MB \u2022 Video" },
@@ -313,12 +313,12 @@
             comments: [
                 {
                     author: "\u{1F464} Alice Brown (Student)",
-                    date: "Nov 5, 2024 at 1:15 PM",
+                    date: "Nov 5, 2026 at 1:15 PM",
                     text: "Great starting point for web development! The examples were very clear and easy to follow."
                 },
                 {
                     author: "\u{1F468}\u200D\u{1F3EB} Dr. John Smith (Instructor)",
-                    date: "Nov 6, 2024 at 9:30 AM",
+                    date: "Nov 6, 2026 at 9:30 AM",
                     text: "Thank you, Alice! I'm glad you found the content helpful. Feel free to ask if you have any questions."
                 }
             ]
@@ -329,7 +329,7 @@
             week: "Week 2",
             duration: "90 minutes",
             difficulty: "Intermediate",
-            date: "Nov 15, 2024",
+            date: "Nov 15, 2026",
             notes: [
                 { icon: "\u{1F4C4}", name: "Lecture_2_Jakarta_EE_Fundamentals.pdf", size: "2.4 MB \u2022 PDF" },
                 { icon: "\u{1F3A5}", name: "Lecture_2_Recording.mp4", size: "156 MB \u2022 Video" },
@@ -365,12 +365,12 @@
             comments: [
                 {
                     author: "\u{1F464} John Doe (Student)",
-                    date: "Nov 18, 2024 at 2:30 PM",
+                    date: "Nov 18, 2026 at 2:30 PM",
                     text: "Great explanation of servlets! The examples were really helpful. Could you provide more details on session management in the next lecture?"
                 },
                 {
                     author: "\u{1F468}\u200D\u{1F3EB} Dr. Jane Smith (Instructor)",
-                    date: "Nov 19, 2024 at 10:15 AM",
+                    date: "Nov 19, 2026 at 10:15 AM",
                     text: "Great question, John! Session management will be covered in the next lecture along with HTTP state management techniques."
                 }
             ]
@@ -381,7 +381,7 @@
             week: "Week 3",
             duration: "120 minutes",
             difficulty: "Intermediate",
-            date: "Nov 22, 2024",
+            date: "Nov 22, 2026",
             notes: [
                 { icon: "\u{1F4C4}", name: "Lecture_3_Spring_Framework_Basics.pdf", size: "2.8 MB \u2022 PDF" },
                 { icon: "\u{1F3A5}", name: "Lecture_3_Recording.mp4", size: "165 MB \u2022 Video" },
@@ -417,12 +417,12 @@
             comments: [
                 {
                     author: "\u{1F464} Sarah Johnson (Student)",
-                    date: "Nov 24, 2024 at 3:00 PM",
+                    date: "Nov 24, 2026 at 3:00 PM",
                     text: "The dependency injection explanation was very clear. Looking forward to the Spring Boot lecture!"
                 },
                 {
                     author: "\u{1F464} Mike Chen (Student)",
-                    date: "Nov 25, 2024 at 10:45 AM",
+                    date: "Nov 25, 2026 at 10:45 AM",
                     text: "I found the MVC pattern explanation helpful. Can we get more practice problems on this topic?"
                 }
             ]
@@ -433,7 +433,7 @@
             week: "Week 4",
             duration: "120 minutes",
             difficulty: "Intermediate",
-            date: "Nov 29, 2024",
+            date: "Nov 29, 2026",
             notes: [
                 { icon: "\u{1F4C4}", name: "Lecture_4_Spring_Boot_Development.pdf", size: "3.1 MB \u2022 PDF" },
                 { icon: "\u{1F3A5}", name: "Lecture_4_Recording.mp4", size: "172 MB \u2022 Video" },
@@ -470,17 +470,17 @@
             comments: [
                 {
                     author: "\u{1F464} Emma Wilson (Student)",
-                    date: "Dec 2, 2024 at 4:20 PM",
+                    date: "Dec 2, 2026 at 4:20 PM",
                     text: "Spring Boot makes development so much faster! The embedded server feature is brilliant."
                 },
                 {
                     author: "\u{1F468}\u200D\u{1F3EB} Dr. John Smith (Instructor)",
-                    date: "Dec 3, 2024 at 11:00 AM",
+                    date: "Dec 3, 2026 at 11:00 AM",
                     text: "Exactly! Spring Boot is perfect for modern microservices development. Great observation, Emma!"
                 },
                 {
                     author: "\u{1F464} David Lee (Student)",
-                    date: "Dec 3, 2024 at 2:15 PM",
+                    date: "Dec 3, 2026 at 2:15 PM",
                     text: "Can we have more examples on deploying to cloud platforms like AWS or Azure?"
                 }
             ]

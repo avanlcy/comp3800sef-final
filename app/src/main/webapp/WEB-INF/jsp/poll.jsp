@@ -245,7 +245,7 @@
     <div class="container-lg">
         <div class="poll-title" id="pollTitle">&#128499;&#65039; Community Poll</div>
         <div class="poll-meta" id="pollMeta">
-            Active until Dec 15, 2024 | 145 Total Votes | 87 Participants
+            Active until Dec 15, 2026 | 145 Total Votes | 87 Participants
         </div>
     </div>
 </div>
@@ -312,7 +312,7 @@
                                 <strong>Status:</strong> <span class="badge bg-success" id="pollStatus2">Active</span>
                             </p>
                             <p class="mb-0">
-                                <strong>Closes:</strong> <span id="closeDate">Dec 15, 2024</span>
+                                <strong>Closes:</strong> <span id="closeDate">Dec 15, 2026</span>
                             </p>
                         </div>
                     </div>
@@ -322,7 +322,7 @@
     </div>
 
     <footer class="text-center py-4 mt-5 border-top">
-        <p class="text-muted">&copy; 2024 Learning Management System. All rights reserved.</p>
+        <p class="text-muted">&copy; 2026 Learning Management System. All rights reserved.</p>
     </footer>
 </div>
 
@@ -333,7 +333,7 @@
             title: "Which topic should be introduced in the next class?",
             totalVotes: 145,
             participants: 87,
-            closeDate: "Dec 15, 2024",
+            closeDate: "Dec 15, 2026",
             status: "Active",
             options: [
                 { label: "Advanced Spring Cloud & Microservices", votes: 51, percentage: 35 },
@@ -345,17 +345,17 @@
             comments: [
                 {
                     author: "\u{1F464} Alex Thompson (Student)",
-                    date: "Nov 20, 2024 at 1:15 PM",
+                    date: "Nov 20, 2026 at 1:15 PM",
                     text: "I think microservices is the way to go in modern web development. Looking forward to this topic!"
                 },
                 {
                     author: "\u{1F464} Emma Wilson (Student)",
-                    date: "Nov 20, 2024 at 3:30 PM",
+                    date: "Nov 20, 2026 at 3:30 PM",
                     text: "Database optimization is crucial for our project. Hope we can dive deep into indexing and query performance."
                 },
                 {
                     author: "\u{1F468}\u200D\u{1F3EB} Dr. John Smith (Instructor)",
-                    date: "Nov 21, 2024 at 9:00 AM",
+                    date: "Nov 21, 2026 at 9:00 AM",
                     text: "Great discussion everyone! Based on the poll results, it looks like microservices will be the next topic. Make sure to review the prerequisite materials before the next class."
                 }
             ]
@@ -364,7 +364,7 @@
             title: "Preferred pace of the course?",
             totalVotes: 98,
             participants: 64,
-            closeDate: "Dec 20, 2024",
+            closeDate: "Dec 20, 2026",
             status: "Active",
             options: [
                 { label: "Current pace is perfect", votes: 42, percentage: 43 },
@@ -376,17 +376,17 @@
             comments: [
                 {
                     author: "\u{1F464} Sarah Johnson (Student)",
-                    date: "Nov 22, 2024 at 2:00 PM",
+                    date: "Nov 22, 2026 at 2:00 PM",
                     text: "The current pace works well for me. I can keep up and have time to practice."
                 },
                 {
                     author: "\u{1F464} Mike Chen (Student)",
-                    date: "Nov 22, 2024 at 4:30 PM",
+                    date: "Nov 22, 2026 at 4:30 PM",
                     text: "I'd prefer a slightly faster pace. I feel like I'm getting bored with the depth of coverage."
                 },
                 {
                     author: "\u{1F468}\u200D\u{1F3EB} Dr. Jane Smith (Instructor)",
-                    date: "Nov 23, 2024 at 10:00 AM",
+                    date: "Nov 23, 2026 at 10:00 AM",
                     text: "Thank you for your feedback! We'll try to balance depth and pace moving forward."
                 }
             ]
@@ -395,7 +395,7 @@
             title: "Best time for optional review sessions?",
             totalVotes: 67,
             participants: 52,
-            closeDate: "Dec 22, 2024",
+            closeDate: "Dec 22, 2026",
             status: "Active",
             options: [
                 { label: "Wednesday 2:00 PM", votes: 28, percentage: 42 },
@@ -407,22 +407,22 @@
             comments: [
                 {
                     author: "\u{1F464} Lisa Park (Student)",
-                    date: "Nov 23, 2024 at 1:45 PM",
+                    date: "Nov 23, 2026 at 1:45 PM",
                     text: "Wednesday afternoon works best for my schedule. Thank you for offering review sessions!"
                 },
                 {
                     author: "\u{1F464} David Lee (Student)",
-                    date: "Nov 23, 2024 at 5:15 PM",
+                    date: "Nov 23, 2026 at 5:15 PM",
                     text: "I prefer Friday mornings. It helps me prepare for the upcoming week."
                 },
                 {
                     author: "\u{1F468}\u200D\u{1F3EB} Dr. John Smith (Instructor)",
-                    date: "Nov 24, 2024 at 11:30 AM",
+                    date: "Nov 24, 2026 at 11:30 AM",
                     text: "Wednesday 2:00 PM seems to be the winner! We'll schedule the review sessions then."
                 },
                 {
                     author: "\u{1F464} Rachel Adams (Student)",
-                    date: "Nov 24, 2024 at 2:20 PM",
+                    date: "Nov 24, 2026 at 2:20 PM",
                     text: "Great! Will these sessions be recorded for those who can't attend?"
                 }
             ]
@@ -431,7 +431,7 @@
             title: "Preferred assignment format?",
             totalVotes: 112,
             participants: 73,
-            closeDate: "Dec 25, 2024",
+            closeDate: "Dec 25, 2026",
             status: "Active",
             options: [
                 { label: "Code projects", votes: 48, percentage: 43 },
@@ -443,17 +443,17 @@
             comments: [
                 {
                     author: "\u{1F464} James Wilson (Student)",
-                    date: "Nov 24, 2024 at 3:00 PM",
+                    date: "Nov 24, 2026 at 3:00 PM",
                     text: "Code projects are the best way to learn. I feel more confident when I can apply concepts directly."
                 },
                 {
                     author: "\u{1F464} Nina Patel (Student)",
-                    date: "Nov 24, 2024 at 6:30 PM",
+                    date: "Nov 24, 2026 at 6:30 PM",
                     text: "I'd love to do more group projects to improve collaboration skills."
                 },
                 {
                     author: "\u{1F468}\u200D\u{1F3EB} Dr. Jane Smith (Instructor)",
-                    date: "Nov 25, 2024 at 9:00 AM",
+                    date: "Nov 25, 2026 at 9:00 AM",
                     text: "Code projects are indeed effective! We'll continue with hands-on assignments."
                 }
             ]
@@ -462,7 +462,7 @@
             title: "Would you like more practical projects?",
             totalVotes: 156,
             participants: 94,
-            closeDate: "Dec 28, 2024",
+            closeDate: "Dec 28, 2026",
             status: "Active",
             options: [
                 { label: "Definitely, more projects!", votes: 118, percentage: 76 },
@@ -474,27 +474,27 @@
             comments: [
                 {
                     author: "\u{1F464} Christopher Lee (Student)",
-                    date: "Nov 25, 2024 at 1:30 PM",
+                    date: "Nov 25, 2026 at 1:30 PM",
                     text: "Yes! More projects would really help solidify the concepts. Theory is good, but practice is essential."
                 },
                 {
                     author: "\u{1F464} Victoria Brown (Student)",
-                    date: "Nov 25, 2024 at 4:00 PM",
+                    date: "Nov 25, 2026 at 4:00 PM",
                     text: "Practical projects make learning much more engaging and enjoyable."
                 },
                 {
                     author: "\u{1F468}\u200D\u{1F3EB} Dr. John Smith (Instructor)",
-                    date: "Nov 26, 2024 at 10:00 AM",
+                    date: "Nov 26, 2026 at 10:00 AM",
                     text: "Excellent feedback! We're planning to introduce more capstone projects starting next semester. Stay tuned!"
                 },
                 {
                     author: "\u{1F464} Marcus Johnson (Student)",
-                    date: "Nov 26, 2024 at 2:45 PM",
+                    date: "Nov 26, 2026 at 2:45 PM",
                     text: "Great! Can the projects be portfolio-worthy? I'd like to showcase them to potential employers."
                 },
                 {
                     author: "\u{1F468}\u200D\u{1F3EB} Dr. John Smith (Instructor)",
-                    date: "Nov 26, 2024 at 3:30 PM",
+                    date: "Nov 26, 2026 at 3:30 PM",
                     text: "That's a great idea, Marcus! We'll definitely focus on creating portfolio-quality projects."
                 }
             ]

@@ -346,7 +346,7 @@
 
 
     <footer class="text-center py-4 mt-5 border-top">
-        <p class="text-muted">&copy; 2024 Learning Management System. All rights reserved.</p>
+        <p class="text-muted">&copy; 2026 Learning Management System. All rights reserved.</p>
     </footer>
 </div>
 

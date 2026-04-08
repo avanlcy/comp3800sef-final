@@ -8,42 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><c:out value="${poll.question}"/> - <spring:message code="app.name"/></title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-    <style>
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .navbar { background-color: #2c3e50; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .navbar-brand { font-weight: bold; font-size: 1.5rem; }
-        .btn-auth { background-color: #667eea; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; cursor: pointer; transition: background-color 0.3s; }
-        .btn-auth:hover { background-color: #5568d3; text-decoration: none; color: white; }
-        .btn-logout { background-color: #e74c3c; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; transition: background-color 0.3s; }
-        .btn-logout:hover { background-color: #c0392b; text-decoration: none; color: white; }
-        .breadcrumb-section { background-color: white; padding: 20px 0; border-bottom: 1px solid #e0e0e0; margin-bottom: 30px; }
-        .poll-header { background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); color: white; padding: 30px 0; margin-bottom: 30px; }
-        .poll-title { font-size: 2rem; font-weight: bold; margin-bottom: 10px; }
-        .section-title { font-size: 1.5rem; font-weight: bold; color: #2c3e50; margin-top: 30px; margin-bottom: 20px; border-bottom: 2px solid #f39c12; padding-bottom: 10px; }
-        .poll-options { background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #f39c12; }
-        .poll-option { margin-bottom: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 4px; cursor: pointer; transition: background-color 0.3s, box-shadow 0.3s; }
-        .poll-option:hover { background-color: #e9ecef; }
-        .poll-option.selected { background-color: #fff3cd; border: 2px solid #f39c12; }
-        .poll-option input[type="radio"] { margin-right: 10px; cursor: pointer; }
-        .option-label { display: flex; align-items: center; margin-bottom: 10px; font-weight: 500; color: #2c3e50; }
-        .option-stats { display: flex; align-items: center; margin-left: 28px; }
-        .progress-bar-custom { background-color: #f39c12; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: white; font-size: 0.85rem; font-weight: bold; min-width: 50px; }
-        .vote-count { margin-left: 10px; color: #666; font-size: 0.9rem; min-width: 80px; }
-        .btn-vote { background-color: #f39c12; border-color: #f39c12; color: white; padding: 10px 30px; font-weight: bold; }
-        .btn-vote:hover { background-color: #e67e22; border-color: #e67e22; color: white; }
-        .poll-info-box { background-color: #ecf0f1; padding: 15px; border-radius: 4px; margin-bottom: 20px; border-left: 4px solid #3498db; }
-        .poll-info-box.voted { background-color: #d5f4e6; border-left-color: #27ae60; }
-        .comments-section { background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #e74c3c; }
-        .comment-item { padding: 15px; border-bottom: 1px solid #e0e0e0; margin-bottom: 15px; }
-        .comment-item:last-child { border-bottom: none; margin-bottom: 0; }
-        .comment-author { font-weight: bold; color: #2c3e50; margin-bottom: 5px; }
-        .comment-date { color: #999; font-size: 0.85rem; margin-bottom: 10px; }
-        .comment-text { color: #555; line-height: 1.5; }
-        .comment-form { background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        .form-control:focus { border-color: #f39c12; box-shadow: 0 0 0 0.2rem rgba(243, 156, 18, 0.25); }
-        .btn-primary-custom { background-color: #f39c12; border-color: #f39c12; color: white; }
-        .btn-primary-custom:hover { background-color: #e67e22; border-color: #e67e22; color: white; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/app.css">
 </head>
 <body>
 
@@ -65,7 +33,7 @@
         <div class="d-flex justify-content-between align-items-start">
             <div>
                 <div class="poll-title"><c:out value="${poll.question}"/></div>
-                <div style="font-size: 0.95rem; opacity: 0.9;">
+                <div class="text-muted" style="font-size: 0.9rem;">
                     <c:set var="totalVotes" value="0"/>
                     <c:forEach var="option" items="${poll.options}">
                         <c:set var="totalVotes" value="${totalVotes + option.voteCount}"/>
@@ -196,14 +164,12 @@
             <!-- Poll Statistics -->
             <div class="row mt-4 mb-5">
                 <div class="col-md-6">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-header bg-light">
-                            <strong>Poll Statistics</strong>
-                        </div>
+                    <div class="card">
+                        <div class="card-header">Poll Statistics</div>
                         <div class="card-body">
-                            <p class="mb-2"><strong>Total Votes:</strong> <span class="badge bg-warning text-dark">${totalVotes}</span></p>
-                            <p class="mb-2"><strong>Options:</strong> <span class="badge bg-info">${poll.options.size()}</span></p>
-                            <p class="mb-0"><strong>Comments:</strong> <span class="badge bg-secondary">${poll.comments.size()}</span></p>
+                            <p class="mb-2"><strong>Total Votes:</strong> ${totalVotes}</p>
+                            <p class="mb-2"><strong>Options:</strong> ${poll.options.size()}</p>
+                            <p class="mb-0"><strong>Comments:</strong> ${poll.comments.size()}</p>
                         </div>
                     </div>
                 </div>

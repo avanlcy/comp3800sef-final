@@ -9,31 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><spring:message code="app.name"/></title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-    <style>
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .navbar { background-color: #2c3e50; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .navbar-brand { font-weight: bold; font-size: 1.5rem; }
-        .hero-section { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 0; margin-bottom: 40px; }
-        .course-title { font-size: 2.5rem; font-weight: bold; margin-bottom: 20px; }
-        .course-description { font-size: 1.1rem; margin-bottom: 30px; }
-        .section-title { font-size: 2rem; font-weight: bold; color: #2c3e50; margin-top: 40px; margin-bottom: 30px; border-bottom: 3px solid #667eea; padding-bottom: 10px; }
-        .lecture-card { background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-bottom: 20px; transition: transform 0.2s, box-shadow 0.2s; }
-        .lecture-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .lecture-title { font-size: 1.3rem; font-weight: bold; color: #2c3e50; margin-bottom: 10px; }
-        .lecture-preview { color: #666; font-size: 0.95rem; margin-bottom: 15px; }
-        .poll-card { background: white; border-left: 4px solid #f39c12; border-radius: 4px; padding: 20px; margin-bottom: 20px; transition: transform 0.2s, box-shadow 0.2s; }
-        .poll-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .poll-question { font-size: 1.2rem; font-weight: bold; color: #2c3e50; margin-bottom: 10px; }
-        .poll-info { color: #999; font-size: 0.9rem; }
-        .btn-view { background-color: #667eea; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; transition: background-color 0.3s; }
-        .btn-view:hover { background-color: #5568d3; text-decoration: none; color: white; }
-        .btn-auth { background-color: #667eea; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; cursor: pointer; transition: background-color 0.3s; }
-        .btn-auth:hover { background-color: #5568d3; text-decoration: none; color: white; }
-        .btn-logout { background-color: #e74c3c; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; transition: background-color 0.3s; }
-        .btn-logout:hover { background-color: #c0392b; text-decoration: none; color: white; }
-        .btn-add { background-color: #27ae60; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; transition: background-color 0.3s; }
-        .btn-add:hover { background-color: #219a52; text-decoration: none; color: white; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/app.css">
 </head>
 <body>
 
@@ -46,8 +25,8 @@
             <spring:message code="course.description"/>
         </div>
         <div>
-            <span class="badge bg-light text-dark">${fn:length(lectures)} <spring:message code="index.lectures"/></span>
-            <span class="badge bg-light text-dark">${fn:length(polls)} <spring:message code="index.polls"/></span>
+            <span class="badge bg-light text-dark border">${fn:length(lectures)} <spring:message code="index.lectures"/></span>
+            <span class="badge bg-light text-dark border">${fn:length(polls)} <spring:message code="index.polls"/></span>
         </div>
     </div>
 </div>
@@ -78,12 +57,12 @@
                         <c:out value="${lecture.summary}"/>
                     </div>
                     <c:if test="${pageContext.request.userPrincipal != null}">
-                        <a href="${pageContext.request.contextPath}/lectures/${lecture.id}" class="btn-view">
+                        <a href="${pageContext.request.contextPath}/lectures/${lecture.id}" class="btn btn-primary btn-sm">
                             <spring:message code="index.viewLecture"/>
                         </a>
                     </c:if>
                     <c:if test="${pageContext.request.userPrincipal == null}">
-                        <a href="#" class="btn-view" style="background-color: #95a5a6;" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showAuthTab('login')">
+                        <a href="#" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showAuthTab('login')">
                             <spring:message code="index.loginToView"/>
                         </a>
                     </c:if>
@@ -91,15 +70,13 @@
             </c:forEach>
         </div>
         <div class="col-md-4">
-            <div class="card border-info">
-                <div class="card-header bg-info text-white">
-                    <strong>Course Statistics</strong>
-                </div>
+            <div class="card">
+                <div class="card-header">Course Statistics</div>
                 <div class="card-body">
-                    <p><strong>Instructor:</strong> Dr. John Smith</p>
-                    <p><strong>Duration:</strong> 8 weeks</p>
-                    <p><strong>Level:</strong> Intermediate</p>
-                    <p><strong>Credits:</strong> 3</p>
+                    <p class="mb-2"><strong>Instructor:</strong> Dr. John Smith</p>
+                    <p class="mb-2"><strong>Duration:</strong> 8 weeks</p>
+                    <p class="mb-2"><strong>Level:</strong> Intermediate</p>
+                    <p class="mb-0"><strong>Credits:</strong> 3</p>
                 </div>
             </div>
         </div>
@@ -137,10 +114,8 @@
             </c:forEach>
         </div>
         <div class="col-md-4">
-            <div class="card border-warning">
-                <div class="card-header bg-warning text-dark">
-                    <strong>Quick Links</strong>
-                </div>
+            <div class="card">
+                <div class="card-header">Quick Links</div>
                 <div class="card-body">
                     <ul class="list-unstyled">
                         <c:if test="${pageContext.request.userPrincipal == null}">

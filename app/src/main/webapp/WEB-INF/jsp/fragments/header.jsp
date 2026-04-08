@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg">
     <div class="container-lg">
         <a class="navbar-brand" href="${pageContext.request.contextPath}/">
             <spring:message code="app.name"/>
@@ -45,7 +45,7 @@
                 </li>
                 <c:if test="${pageContext.request.userPrincipal != null}">
                     <li class="nav-item">
-                        <span class="nav-link text-light">
+                        <span class="nav-link">
                             <c:out value="${pageContext.request.userPrincipal.name}"/>
                         </span>
                     </li>
@@ -80,9 +80,9 @@
 <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header" style="background-color: #667eea; color: white;">
+            <div class="modal-header">
                 <h5 class="modal-title" id="authModalLabel">Authentication</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <ul class="nav nav-tabs mb-3" id="authTabs" role="tablist">
@@ -121,7 +121,7 @@
                                     <span style="cursor:pointer;position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:0.85rem;" onclick="togglePassword('loginPassword')">Show</span>
                                 </div>
                             </div>
-                            <button type="submit" class="btn w-100" style="background-color:#667eea;border-color:#667eea;color:white;">
+                            <button type="submit" class="btn btn-primary w-100">
                                 <spring:message code="login.submit"/>
                             </button>
                         </form>
@@ -166,7 +166,7 @@
                                 <label for="phone" class="form-label"><spring:message code="user.phone"/></label>
                                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
                             </div>
-                            <button type="submit" class="btn w-100" style="background-color:#667eea;border-color:#667eea;color:white;">
+                            <button type="submit" class="btn btn-primary w-100">
                                 <spring:message code="register.submit"/>
                             </button>
                         </form>

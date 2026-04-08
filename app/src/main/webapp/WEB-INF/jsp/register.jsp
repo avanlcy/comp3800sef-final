@@ -8,22 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><spring:message code="register.title"/> - <spring:message code="app.name"/></title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/app.css">
     <style>
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .navbar { background-color: #2c3e50; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .navbar-brand { font-weight: bold; font-size: 1.5rem; }
-        .btn-auth { background-color: #667eea; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; cursor: pointer; transition: background-color 0.3s; }
-        .btn-auth:hover { background-color: #5568d3; text-decoration: none; color: white; }
-        .btn-logout { background-color: #e74c3c; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; transition: background-color 0.3s; }
-        .btn-logout:hover { background-color: #c0392b; text-decoration: none; color: white; }
-        .register-card { margin-top: 40px; }
-        .card-header-custom { background-color: #667eea; color: white; border-bottom: none; }
-        .form-control:focus { border-color: #667eea; box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25); }
-        .btn-primary-custom { background-color: #667eea; border-color: #667eea; }
-        .btn-primary-custom:hover { background-color: #5568d3; border-color: #5568d3; }
-        .form-check-input:checked { background-color: #667eea; border-color: #667eea; }
+        .register-card { margin-top: var(--s-5); }
         .password-input-group { position: relative; }
-        .toggle-password { cursor: pointer; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
+        .toggle-password { cursor: pointer; position: absolute; right: var(--s-3); top: 50%; transform: translateY(-50%); font-size: 0.85rem; color: var(--color-text-muted); }
     </style>
 </head>
 <body>
@@ -33,10 +25,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6 register-card">
-            <div class="card shadow">
-                <div class="card-header card-header-custom">
-                    <h4 class="mb-0"><spring:message code="register.title"/></h4>
-                </div>
+            <div class="card">
+                <div class="card-header"><spring:message code="register.title"/></div>
                 <div class="card-body">
                     <c:if test="${not empty error}">
                         <div class="alert alert-danger">
@@ -77,7 +67,7 @@
                             <label for="phone" class="form-label"><spring:message code="user.phone"/></label>
                             <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
                         </div>
-                        <button type="submit" class="btn btn-primary-custom btn-primary w-100">
+                        <button type="submit" class="btn btn-primary w-100">
                             <spring:message code="register.submit"/>
                         </button>
                     </form>

@@ -8,22 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><spring:message code="poll.addPoll"/> - <spring:message code="app.name"/></title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-    <style>
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .navbar { background-color: #2c3e50; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .navbar-brand { font-weight: bold; font-size: 1.5rem; }
-        .btn-auth { background-color: #667eea; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; cursor: pointer; transition: background-color 0.3s; }
-        .btn-auth:hover { background-color: #5568d3; text-decoration: none; color: white; }
-        .btn-logout { background-color: #e74c3c; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; transition: background-color 0.3s; }
-        .btn-logout:hover { background-color: #c0392b; text-decoration: none; color: white; }
-        .page-header { background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); color: white; padding: 40px 0; margin-bottom: 30px; }
-        .page-header h1 { font-size: 2rem; font-weight: bold; }
-        .form-card { background-color: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 30px; }
-        .form-control:focus { border-color: #f39c12; box-shadow: 0 0 0 0.2rem rgba(243, 156, 18, 0.25); }
-        .btn-submit { background-color: #f39c12; border-color: #f39c12; color: white; padding: 10px 30px; }
-        .btn-submit:hover { background-color: #e67e22; border-color: #e67e22; color: white; }
-        .option-group { background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #f39c12; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/app.css">
 </head>
 <body>
 
@@ -32,7 +20,7 @@
 <div class="page-header">
     <div class="container-lg">
         <h1><spring:message code="poll.addPoll"/></h1>
-        <p class="mb-0" style="opacity: 0.9;">Create a new poll with options</p>
+        <p class="mb-0 text-muted">Create a new poll with options</p>
     </div>
 </div>
 

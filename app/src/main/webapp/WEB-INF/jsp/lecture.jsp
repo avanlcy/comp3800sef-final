@@ -8,37 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><c:out value="${lecture.title}"/> - <spring:message code="app.name"/></title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-    <style>
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .navbar { background-color: #2c3e50; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .navbar-brand { font-weight: bold; font-size: 1.5rem; }
-        .btn-auth { background-color: #667eea; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; cursor: pointer; transition: background-color 0.3s; }
-        .btn-auth:hover { background-color: #5568d3; text-decoration: none; color: white; }
-        .btn-logout { background-color: #e74c3c; color: white; border: none; padding: 8px 16px; border-radius: 4px; text-decoration: none; transition: background-color 0.3s; }
-        .btn-logout:hover { background-color: #c0392b; text-decoration: none; color: white; }
-        .breadcrumb-section { background-color: white; padding: 20px 0; border-bottom: 1px solid #e0e0e0; margin-bottom: 30px; }
-        .lecture-header { background-color: #667eea; color: white; padding: 30px 0; margin-bottom: 30px; }
-        .lecture-title { font-size: 2rem; font-weight: bold; margin-bottom: 10px; }
-        .section-title { font-size: 1.5rem; font-weight: bold; color: #2c3e50; margin-top: 30px; margin-bottom: 20px; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
-        .lecture-notes { background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #667eea; }
-        .note-item { display: flex; align-items: center; padding: 12px; background-color: #f8f9fa; border-radius: 4px; margin-bottom: 10px; text-decoration: none; color: #333; transition: background-color 0.3s; }
-        .note-item:hover { background-color: #e9ecef; text-decoration: none; color: #333; }
-        .note-icon { font-size: 1.5rem; margin-right: 15px; color: #667eea; }
-        .note-content { flex: 1; }
-        .note-filename { font-weight: bold; color: #2c3e50; }
-        .summary-content { background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #27ae60; line-height: 1.6; }
-        .comments-section { background-color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #e74c3c; }
-        .comment-item { padding: 15px; border-bottom: 1px solid #e0e0e0; margin-bottom: 15px; }
-        .comment-item:last-child { border-bottom: none; margin-bottom: 0; }
-        .comment-author { font-weight: bold; color: #2c3e50; margin-bottom: 5px; }
-        .comment-date { color: #999; font-size: 0.85rem; margin-bottom: 10px; }
-        .comment-text { color: #555; line-height: 1.5; }
-        .comment-form { background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        .form-control:focus { border-color: #667eea; box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25); }
-        .btn-primary-custom { background-color: #667eea; border-color: #667eea; color: white; }
-        .btn-primary-custom:hover { background-color: #5568d3; border-color: #5568d3; color: white; }
-        .btn-delete-material { font-size: 0.8rem; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/app.css">
 </head>
 <body>
 
@@ -174,10 +147,8 @@
         </div>
 
         <div class="col-lg-4">
-            <div class="card mb-3 border-0 shadow-sm">
-                <div class="card-header bg-light">
-                    <strong>Lecture Information</strong>
-                </div>
+            <div class="card mb-3">
+                <div class="card-header">Lecture Information</div>
                 <div class="card-body">
                     <p class="mb-2"><strong>Lecture:</strong> <c:out value="${lecture.title}"/></p>
                     <p class="mb-2"><strong>Materials:</strong> ${lecture.materials.size()} files</p>

@@ -83,7 +83,7 @@
                         </a>
                     </c:if>
                     <c:if test="${pageContext.request.userPrincipal == null}">
-                        <a href="${pageContext.request.contextPath}/login" class="btn-view" style="background-color: #95a5a6;">
+                        <a href="#" class="btn-view" style="background-color: #95a5a6;" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showAuthTab('login')">
                             <spring:message code="index.loginToView"/>
                         </a>
                     </c:if>
@@ -121,7 +121,7 @@
                     <a href="${pageContext.request.contextPath}/polls/${poll.id}" class="text-decoration-none">
                 </c:if>
                 <c:if test="${pageContext.request.userPrincipal == null}">
-                    <a href="${pageContext.request.contextPath}/login" class="text-decoration-none">
+                    <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showAuthTab('login')">
                 </c:if>
                     <div class="poll-card">
                         <div class="poll-question"><c:out value="${poll.question}"/></div>
@@ -144,8 +144,8 @@
                 <div class="card-body">
                     <ul class="list-unstyled">
                         <c:if test="${pageContext.request.userPrincipal == null}">
-                            <li><a href="${pageContext.request.contextPath}/login" class="text-decoration-none">&#128221; <spring:message code="nav.login"/></a></li>
-                            <li><a href="${pageContext.request.contextPath}/register" class="text-decoration-none">&#128203; <spring:message code="nav.register"/></a></li>
+                            <li><a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showAuthTab('login')">&#128221; <spring:message code="nav.login"/></a></li>
+                            <li><a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#authModal" onclick="showAuthTab('register')">&#128203; <spring:message code="nav.register"/></a></li>
                         </c:if>
                         <c:if test="${pageContext.request.userPrincipal != null}">
                             <li><a href="${pageContext.request.contextPath}/profile" class="text-decoration-none">&#128100; <spring:message code="nav.profile"/></a></li>

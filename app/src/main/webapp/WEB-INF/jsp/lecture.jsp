@@ -195,7 +195,7 @@
     <div class="container-lg">
         <div class="lecture-title" id="lectureTitle">Lecture 1: Introduction to Web Development</div>
         <div class="lecture-meta" id="lectureMeta">
-            &#128197; Published on Nov 1, 2026 | &#9201;&#65039; Duration: 90 minutes | &#128205; Week 1
+            &#128197; Published on Feb 3, 2026 | &#9201;&#65039; Duration: 90 minutes | &#128205; Week 1
         </div>
     </div>
 </div>

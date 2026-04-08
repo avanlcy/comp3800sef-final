@@ -10,7 +10,7 @@ public class DataInitializer {
     public Map<Integer, Map<String, Object>> getLectureData() {
         Map<Integer, Map<String, Object>> lectures = new LinkedHashMap<>();
         lectures.put(1, createLecture(
-            "Lecture 1: Introduction to Web Development", "#1", "Week 1", "90 minutes", "Beginner", "Nov 1, 2026",
+            "Lecture 1: Introduction to Web Development", "#1", "Week 1", "90 minutes", "Beginner", "Feb 3, 2026",
             List.of(
                 Map.of("icon", "\uD83D\uDCC4", "name", "Lecture_1_Introduction_to_Web_Development.pdf", "size", "1.8 MB \u2022 PDF"),
                 Map.of("icon", "\uD83C\uDFA5", "name", "Lecture_1_Recording.mp4", "size", "142 MB \u2022 Video"),
@@ -43,13 +43,13 @@ public class DataInitializer {
                 + "<li>CSS Flexbox and Grid Guide</li>"
                 + "</ul>",
             List.of(
-                Map.of("author", "\uD83D\uDC64 Alice Brown (Student)", "date", "Nov 5, 2026 at 1:15 PM", "text", "Great starting point for web development! The examples were very clear and easy to follow."),
-                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Nov 6, 2026 at 9:30 AM", "text", "Thank you, Alice! I'm glad you found the content helpful. Feel free to ask if you have any questions.")
+                Map.of("author", "\uD83D\uDC64 Alice Brown (Student)", "date", "Feb 5, 2026 at 1:15 PM", "text", "Great starting point for web development! The examples were very clear and easy to follow."),
+                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Feb 6, 2026 at 9:30 AM", "text", "Thank you, Alice! I'm glad you found the content helpful. Feel free to ask if you have any questions.")
             )
         ));
 
         lectures.put(2, createLecture(
-            "Lecture 2: Jakarta EE Fundamentals", "#2", "Week 2", "90 minutes", "Intermediate", "Nov 15, 2026",
+            "Lecture 2: Jakarta EE Fundamentals", "#2", "Week 2", "90 minutes", "Intermediate", "Feb 10, 2026",
             List.of(
                 Map.of("icon", "\uD83D\uDCC4", "name", "Lecture_2_Jakarta_EE_Fundamentals.pdf", "size", "2.4 MB \u2022 PDF"),
                 Map.of("icon", "\uD83C\uDFA5", "name", "Lecture_2_Recording.mp4", "size", "156 MB \u2022 Video"),
@@ -83,13 +83,13 @@ public class DataInitializer {
                 + "<li>JSP and JSTL Best Practices Guide</li>"
                 + "</ul>",
             List.of(
-                Map.of("author", "\uD83D\uDC64 John Doe (Student)", "date", "Nov 18, 2026 at 2:30 PM", "text", "Great explanation of servlets! The examples were really helpful. Could you provide more details on session management in the next lecture?"),
-                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. Jane Smith (Instructor)", "date", "Nov 19, 2026 at 10:15 AM", "text", "Great question, John! Session management will be covered in the next lecture along with HTTP state management techniques.")
+                Map.of("author", "\uD83D\uDC64 John Doe (Student)", "date", "Feb 13, 2026 at 2:30 PM", "text", "Great explanation of servlets! The examples were really helpful. Could you provide more details on session management in the next lecture?"),
+                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. Jane Smith (Instructor)", "date", "Feb 14, 2026 at 10:15 AM", "text", "Great question, John! Session management will be covered in the next lecture along with HTTP state management techniques.")
             )
         ));
 
         lectures.put(3, createLecture(
-            "Lecture 3: Spring Framework Basics", "#3", "Week 3", "120 minutes", "Intermediate", "Nov 22, 2026",
+            "Lecture 3: Spring Framework Basics", "#3", "Week 3", "120 minutes", "Intermediate", "Feb 17, 2026",
             List.of(
                 Map.of("icon", "\uD83D\uDCC4", "name", "Lecture_3_Spring_Framework_Basics.pdf", "size", "2.8 MB \u2022 PDF"),
                 Map.of("icon", "\uD83C\uDFA5", "name", "Lecture_3_Recording.mp4", "size", "165 MB \u2022 Video"),
@@ -123,13 +123,13 @@ public class DataInitializer {
                 + "<li>Dependency Injection Best Practices</li>"
                 + "</ul>",
             List.of(
-                Map.of("author", "\uD83D\uDC64 Sarah Johnson (Student)", "date", "Nov 24, 2026 at 3:00 PM", "text", "The dependency injection explanation was very clear. Looking forward to the Spring Boot lecture!"),
-                Map.of("author", "\uD83D\uDC64 Mike Chen (Student)", "date", "Nov 25, 2026 at 10:45 AM", "text", "I found the MVC pattern explanation helpful. Can we get more practice problems on this topic?")
+                Map.of("author", "\uD83D\uDC64 Sarah Johnson (Student)", "date", "Feb 22, 2026 at 3:00 PM", "text", "The dependency injection explanation was very clear. Looking forward to the Spring Boot lecture!"),
+                Map.of("author", "\uD83D\uDC64 Mike Chen (Student)", "date", "Feb 20, 2026 at 10:45 AM", "text", "I found the MVC pattern explanation helpful. Can we get more practice problems on this topic?")
             )
         ));
 
         lectures.put(4, createLecture(
-            "Lecture 4: Spring Boot Development", "#4", "Week 4", "120 minutes", "Intermediate", "Nov 29, 2026",
+            "Lecture 4: Spring Boot Development", "#4", "Week 4", "120 minutes", "Intermediate", "Feb 24, 2026",
             List.of(
                 Map.of("icon", "\uD83D\uDCC4", "name", "Lecture_4_Spring_Boot_Development.pdf", "size", "3.1 MB \u2022 PDF"),
                 Map.of("icon", "\uD83C\uDFA5", "name", "Lecture_4_Recording.mp4", "size", "172 MB \u2022 Video"),
@@ -164,9 +164,9 @@ public class DataInitializer {
                 + "<li>Spring Boot Testing Guide</li>"
                 + "</ul>",
             List.of(
-                Map.of("author", "\uD83D\uDC64 Emma Wilson (Student)", "date", "Dec 2, 2026 at 4:20 PM", "text", "Spring Boot makes development so much faster! The embedded server feature is brilliant."),
-                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Dec 3, 2026 at 11:00 AM", "text", "Exactly! Spring Boot is perfect for modern microservices development. Great observation, Emma!"),
-                Map.of("author", "\uD83D\uDC64 David Lee (Student)", "date", "Dec 3, 2026 at 2:15 PM", "text", "Can we have more examples on deploying to cloud platforms like AWS or Azure?")
+                Map.of("author", "\uD83D\uDC64 Emma Wilson (Student)", "date", "Feb 26, 2026 at 4:20 PM", "text", "Spring Boot makes development so much faster! The embedded server feature is brilliant."),
+                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Feb 27, 2026 at 11:00 AM", "text", "Exactly! Spring Boot is perfect for modern microservices development. Great observation, Emma!"),
+                Map.of("author", "\uD83D\uDC64 David Lee (Student)", "date", "Feb 27, 2026 at 2:15 PM", "text", "Can we have more examples on deploying to cloud platforms like AWS or Azure?")
             )
         ));
 
@@ -177,7 +177,7 @@ public class DataInitializer {
         Map<Integer, Map<String, Object>> polls = new LinkedHashMap<>();
 
         polls.put(1, createPoll(
-            "Which topic should be introduced in the next class?", 145, 87, "Dec 15, 2026", "Active",
+            "Which topic should be introduced in the next class?", 145, 87, "Mar 15, 2026", "Active",
             List.of(
                 Map.of("label", "Advanced Spring Cloud & Microservices", "votes", 51, "percentage", 35),
                 Map.of("label", "RESTful API Design Best Practices", "votes", 40, "percentage", 28),
@@ -186,14 +186,14 @@ public class DataInitializer {
                 Map.of("label", "Cloud Deployment & DevOps", "votes", 8, "percentage", 5)
             ),
             List.of(
-                Map.of("author", "\uD83D\uDC64 Alex Thompson (Student)", "date", "Nov 20, 2026 at 1:15 PM", "text", "I think microservices is the way to go in modern web development. Looking forward to this topic!"),
-                Map.of("author", "\uD83D\uDC64 Emma Wilson (Student)", "date", "Nov 20, 2026 at 3:30 PM", "text", "Database optimization is crucial for our project. Hope we can dive deep into indexing and query performance."),
-                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Nov 21, 2026 at 9:00 AM", "text", "Great discussion everyone! Based on the poll results, it looks like microservices will be the next topic. Make sure to review the prerequisite materials before the next class.")
+                Map.of("author", "\uD83D\uDC64 Alex Thompson (Student)", "date", "Feb 18, 2026 at 1:15 PM", "text", "I think microservices is the way to go in modern web development. Looking forward to this topic!"),
+                Map.of("author", "\uD83D\uDC64 Emma Wilson (Student)", "date", "Feb 18, 2026 at 3:30 PM", "text", "Database optimization is crucial for our project. Hope we can dive deep into indexing and query performance."),
+                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Feb 19, 2026 at 9:00 AM", "text", "Great discussion everyone! Based on the poll results, it looks like microservices will be the next topic. Make sure to review the prerequisite materials before the next class.")
             )
         ));
 
         polls.put(2, createPoll(
-            "Preferred pace of the course?", 98, 64, "Dec 20, 2026", "Active",
+            "Preferred pace of the course?", 98, 64, "Mar 20, 2026", "Active",
             List.of(
                 Map.of("label", "Current pace is perfect", "votes", 42, "percentage", 43),
                 Map.of("label", "Slightly faster", "votes", 28, "percentage", 29),
@@ -202,14 +202,14 @@ public class DataInitializer {
                 Map.of("label", "Much slower", "votes", 4, "percentage", 4)
             ),
             List.of(
-                Map.of("author", "\uD83D\uDC64 Sarah Johnson (Student)", "date", "Nov 22, 2026 at 2:00 PM", "text", "The current pace works well for me. I can keep up and have time to practice."),
-                Map.of("author", "\uD83D\uDC64 Mike Chen (Student)", "date", "Nov 22, 2026 at 4:30 PM", "text", "I'd prefer a slightly faster pace. I feel like I'm getting bored with the depth of coverage."),
-                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. Jane Smith (Instructor)", "date", "Nov 23, 2026 at 10:00 AM", "text", "Thank you for your feedback! We'll try to balance depth and pace moving forward.")
+                Map.of("author", "\uD83D\uDC64 Sarah Johnson (Student)", "date", "Feb 20, 2026 at 2:00 PM", "text", "The current pace works well for me. I can keep up and have time to practice."),
+                Map.of("author", "\uD83D\uDC64 Mike Chen (Student)", "date", "Feb 20, 2026 at 4:30 PM", "text", "I'd prefer a slightly faster pace. I feel like I'm getting bored with the depth of coverage."),
+                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. Jane Smith (Instructor)", "date", "Feb 21, 2026 at 10:00 AM", "text", "Thank you for your feedback! We'll try to balance depth and pace moving forward.")
             )
         ));
 
         polls.put(3, createPoll(
-            "Best time for optional review sessions?", 67, 52, "Dec 22, 2026", "Active",
+            "Best time for optional review sessions?", 67, 52, "Mar 22, 2026", "Active",
             List.of(
                 Map.of("label", "Wednesday 2:00 PM", "votes", 28, "percentage", 42),
                 Map.of("label", "Friday 10:00 AM", "votes", 18, "percentage", 27),
@@ -218,15 +218,15 @@ public class DataInitializer {
                 Map.of("label", "Recorded sessions only", "votes", 2, "percentage", 3)
             ),
             List.of(
-                Map.of("author", "\uD83D\uDC64 Lisa Park (Student)", "date", "Nov 23, 2026 at 1:45 PM", "text", "Wednesday afternoon works best for my schedule. Thank you for offering review sessions!"),
-                Map.of("author", "\uD83D\uDC64 David Lee (Student)", "date", "Nov 23, 2026 at 5:15 PM", "text", "I prefer Friday mornings. It helps me prepare for the upcoming week."),
-                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Nov 24, 2026 at 11:30 AM", "text", "Wednesday 2:00 PM seems to be the winner! We'll schedule the review sessions then."),
-                Map.of("author", "\uD83D\uDC64 Rachel Adams (Student)", "date", "Nov 24, 2026 at 2:20 PM", "text", "Great! Will these sessions be recorded for those who can't attend?")
+                Map.of("author", "\uD83D\uDC64 Lisa Park (Student)", "date", "Feb 21, 2026 at 1:45 PM", "text", "Wednesday afternoon works best for my schedule. Thank you for offering review sessions!"),
+                Map.of("author", "\uD83D\uDC64 David Lee (Student)", "date", "Feb 21, 2026 at 5:15 PM", "text", "I prefer Friday mornings. It helps me prepare for the upcoming week."),
+                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Feb 22, 2026 at 11:30 AM", "text", "Wednesday 2:00 PM seems to be the winner! We'll schedule the review sessions then."),
+                Map.of("author", "\uD83D\uDC64 Rachel Adams (Student)", "date", "Feb 22, 2026 at 2:20 PM", "text", "Great! Will these sessions be recorded for those who can't attend?")
             )
         ));
 
         polls.put(4, createPoll(
-            "Preferred assignment format?", 112, 73, "Dec 25, 2026", "Active",
+            "Preferred assignment format?", 112, 73, "Mar 25, 2026", "Active",
             List.of(
                 Map.of("label", "Code projects", "votes", 48, "percentage", 43),
                 Map.of("label", "Written assignments", "votes", 20, "percentage", 18),
@@ -235,14 +235,14 @@ public class DataInitializer {
                 Map.of("label", "No preference", "votes", 4, "percentage", 4)
             ),
             List.of(
-                Map.of("author", "\uD83D\uDC64 James Wilson (Student)", "date", "Nov 24, 2026 at 3:00 PM", "text", "Code projects are the best way to learn. I feel more confident when I can apply concepts directly."),
-                Map.of("author", "\uD83D\uDC64 Nina Patel (Student)", "date", "Nov 24, 2026 at 6:30 PM", "text", "I'd love to do more group projects to improve collaboration skills."),
-                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. Jane Smith (Instructor)", "date", "Nov 25, 2026 at 9:00 AM", "text", "Code projects are indeed effective! We'll continue with hands-on assignments.")
+                Map.of("author", "\uD83D\uDC64 James Wilson (Student)", "date", "Feb 22, 2026 at 3:00 PM", "text", "Code projects are the best way to learn. I feel more confident when I can apply concepts directly."),
+                Map.of("author", "\uD83D\uDC64 Nina Patel (Student)", "date", "Feb 22, 2026 at 6:30 PM", "text", "I'd love to do more group projects to improve collaboration skills."),
+                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. Jane Smith (Instructor)", "date", "Feb 23, 2026 at 9:00 AM", "text", "Code projects are indeed effective! We'll continue with hands-on assignments.")
             )
         ));
 
         polls.put(5, createPoll(
-            "Would you like more practical projects?", 156, 94, "Dec 28, 2026", "Active",
+            "Would you like more practical projects?", 156, 94, "Mar 28, 2026", "Active",
             List.of(
                 Map.of("label", "Definitely, more projects!", "votes", 118, "percentage", 76),
                 Map.of("label", "Current amount is fine", "votes", 28, "percentage", 18),
@@ -251,11 +251,11 @@ public class DataInitializer {
                 Map.of("label", "No projects", "votes", 1, "percentage", 1)
             ),
             List.of(
-                Map.of("author", "\uD83D\uDC64 Christopher Lee (Student)", "date", "Nov 25, 2026 at 1:30 PM", "text", "Yes! More projects would really help solidify the concepts. Theory is good, but practice is essential."),
-                Map.of("author", "\uD83D\uDC64 Victoria Brown (Student)", "date", "Nov 25, 2026 at 4:00 PM", "text", "Practical projects make learning much more engaging and enjoyable."),
-                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Nov 26, 2026 at 10:00 AM", "text", "Excellent feedback! We're planning to introduce more capstone projects starting next semester. Stay tuned!"),
-                Map.of("author", "\uD83D\uDC64 Marcus Johnson (Student)", "date", "Nov 26, 2026 at 2:45 PM", "text", "Great! Can the projects be portfolio-worthy? I'd like to showcase them to potential employers."),
-                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Nov 26, 2026 at 3:30 PM", "text", "That's a great idea, Marcus! We'll definitely focus on creating portfolio-quality projects.")
+                Map.of("author", "\uD83D\uDC64 Christopher Lee (Student)", "date", "Feb 23, 2026 at 1:30 PM", "text", "Yes! More projects would really help solidify the concepts. Theory is good, but practice is essential."),
+                Map.of("author", "\uD83D\uDC64 Victoria Brown (Student)", "date", "Feb 23, 2026 at 4:00 PM", "text", "Practical projects make learning much more engaging and enjoyable."),
+                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Feb 24, 2026 at 10:00 AM", "text", "Excellent feedback! We're planning to introduce more capstone projects starting next semester. Stay tuned!"),
+                Map.of("author", "\uD83D\uDC64 Marcus Johnson (Student)", "date", "Feb 24, 2026 at 2:45 PM", "text", "Great! Can the projects be portfolio-worthy? I'd like to showcase them to potential employers."),
+                Map.of("author", "\uD83D\uDC68\u200D\uD83C\uDFEB Dr. John Smith (Instructor)", "date", "Feb 24, 2026 at 3:30 PM", "text", "That's a great idea, Marcus! We'll definitely focus on creating portfolio-quality projects.")
             )
         ));
 
@@ -273,11 +273,11 @@ public class DataInitializer {
 
     public List<Map<String, String>> getPollListData() {
         List<Map<String, String>> polls = new ArrayList<>();
-        polls.add(Map.of("id", "1", "title", "Which topic should be introduced in the next class?", "votes", "145", "deadline", "Dec 15"));
-        polls.add(Map.of("id", "2", "title", "Preferred pace of the course?", "votes", "98", "deadline", "Dec 20"));
-        polls.add(Map.of("id", "3", "title", "Best time for optional review sessions?", "votes", "67", "deadline", "Dec 22"));
-        polls.add(Map.of("id", "4", "title", "Preferred assignment format?", "votes", "112", "deadline", "Dec 25"));
-        polls.add(Map.of("id", "5", "title", "Would you like more practical projects?", "votes", "156", "deadline", "Dec 28"));
+        polls.add(Map.of("id", "1", "title", "Which topic should be introduced in the next class?", "votes", "145", "deadline", "Mar 15"));
+        polls.add(Map.of("id", "2", "title", "Preferred pace of the course?", "votes", "98", "deadline", "Mar 20"));
+        polls.add(Map.of("id", "3", "title", "Best time for optional review sessions?", "votes", "67", "deadline", "Mar 22"));
+        polls.add(Map.of("id", "4", "title", "Preferred assignment format?", "votes", "112", "deadline", "Mar 25"));
+        polls.add(Map.of("id", "5", "title", "Would you like more practical projects?", "votes", "156", "deadline", "Mar 28"));
         return polls;
     }
 

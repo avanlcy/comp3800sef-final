@@ -245,7 +245,7 @@
     <div class="container-lg">
         <div class="poll-title" id="pollTitle">&#128499;&#65039; Community Poll</div>
         <div class="poll-meta" id="pollMeta">
-            Active until Dec 15, 2026 | 145 Total Votes | 87 Participants
+            Active until Mar 15, 2026 | 145 Total Votes | 87 Participants
         </div>
     </div>
 </div>
@@ -312,7 +312,7 @@
                                 <strong>Status:</strong> <span class="badge bg-success" id="pollStatus2">Active</span>
                             </p>
                             <p class="mb-0">
-                                <strong>Closes:</strong> <span id="closeDate">Dec 15, 2026</span>
+                                <strong>Closes:</strong> <span id="closeDate">Mar 15, 2026</span>
                             </p>
                         </div>
                     </div>

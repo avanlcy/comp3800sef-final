@@ -37,7 +37,13 @@ public class SecurityConfig {
                 .requestMatchers(new AntPathRequestMatcher("/admin/**")).hasRole("TEACHER")
                 .requestMatchers(
                     new AntPathRequestMatcher("/lectures/add"),
-                    new AntPathRequestMatcher("/polls/add")
+                    new AntPathRequestMatcher("/lectures/*/delete"),
+                    new AntPathRequestMatcher("/lectures/*/materials/upload"),
+                    new AntPathRequestMatcher("/lectures/*/materials/*/delete"),
+                    new AntPathRequestMatcher("/lectures/*/comments/*/delete"),
+                    new AntPathRequestMatcher("/polls/add"),
+                    new AntPathRequestMatcher("/polls/*/delete"),
+                    new AntPathRequestMatcher("/polls/*/comments/*/delete")
                 ).hasRole("TEACHER")
                 .anyRequest().authenticated()
             )

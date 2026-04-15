@@ -1,5 +1,14 @@
 # comp3800sef-final
 
+## Team Members
+
+| Name | Student ID |
+|------|-----------|
+| Lau Chun Kit | 13897100 |
+| Lee Chun Yin | 14007429 |
+| Lam Yin Fung | 14004384 |
+| Chong Tsz Ho | 13990354 |
+
 ## For groupmates:
 Use a Debian-based distro (debian 11 works), clone the repository.
 
